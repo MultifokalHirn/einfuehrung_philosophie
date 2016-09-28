@@ -1,0 +1,100 @@
+
+\usepackage[hmarginratio=1:1]{geometry}
+\geometry{ papersize={170mm,240mm}, %% left=1.3cm, right=1.3cm, top=1.2cm, bottom=2.8cm,}
+           left=1.5cm, right=1.5cm, top=1.5cm, bottom=3cm,}
+
+\newcommand{\dgeometry}[1]{
+\geometry{#1}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{1.6cm}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[EC]{\thepage}% gerade Seiten, links
+\fancyhead[OC]{\thepage}% ungerade Seiten, rechts 
+\fancyhead[LE,LO]{\small \textbf \rightmark}
+\fancyhead[RE,RO]{\small \textbf \leftmark}
+}
+
+\usepackage[T1]{fontenc} %hifenização?%
+%\usepackage{times}
+\usepackage{needspace}
+\usepackage{flushend}
+
+\usepackage{fix2col} % palavras nos headers dos dicionario 
+
+\newcommand{\term}[2]{\item\needspace{2\baselineskip}\hspace{-1.2em}\markboth{#1}{#1}\textbf{#1} #2 \markboth{#1}{#1}}
+
+%\newcommand{\term}[2]{\needspace{2\baselineskip}\markboth{#1}{#1}\noindent\textbf{#1} #2 \markboth{#1}{#1}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{1.6cm}
+\fancyhead[EC]{\thepage}% gerade Seiten, links
+\fancyhead[OC]{\thepage}% ungerade Seiten, rechts 
+\fancyhead[LE,LO]{\small \textbf \rightmark}
+\fancyhead[RE,RO]{\small \textbf \leftmark}
+
+\brokenpenalty=10000 % No broken words across columns/pages. 
+\widowpenalty=9999   % Almost no widows at bottom of page. 
+\clubpenalty=9999    % Almost no orphans at top of page. 
+
+
+\setlength{\columnsep}{0.4cm}
+%\setlength{\columnwidth}{7.0cm}
+
+%\setlength{\parindent}{0.3cm}
+%\setlength{\textwidth}{14.3cm}
+%\setlength{\textheight}{21.5cm}
+\usepackage{scalefnt}
+
+\newcommand{\bigletter}[1]{\item \newpage {\noindent\Huge #1}\\[0.5cm] }
+\newcommand{\bigletterc}[1]{\item \mbox{} \\ {\noindent\Huge #1}\\[0.5cm] }
+
+\newenvironment{dictionary}{%
+\parskip 0pt
+
+\list{}{%%\leftmargin .5em
+%                 \labelwidth \z@ %.5em
+%%                 \itemsep 1em %\z@
+                 \itemindent  0em%
+%%                 \labelsep .3em % espace entre . e o texto 
+%%                 \leftmargin 1em
+%%                 \rightmargin 0em
+                 \parsep 0pt
+%                 \listparindent 5.5em
+%                 \let\makelabel\dictlabel
+               } }{\endlist
+}            
+
+\leftmargini 1.2em
+\leftmarginii 1.2em
+\leftmarginiii 1.2em
+\leftmarginiv 1.2em
+\leftmarginv 1.2em
+\leftmarginvi 1.2em
+\leftmargin\leftmargini  
+
+\def\@listI{\leftmargin\leftmargini
+            \parsep 0\p@ \@plus1\p@ \@minus\p@
+            \topsep 8\p@ \@plus2\p@ \@minus4\p@
+            \itemsep0\p@}
+\let\@listi\@listI
+\@listi
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    0\p@ \@plus2\p@ \@minus\p@}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    0\p@ \@plus\p@\@minus\p@
+              \parsep    \z@
+              \partopsep \p@ \@plus\z@ \@minus\p@}
+
+\renewcommand\labelitemi{\normalfont\bfseries --}
+\renewcommand\labelitemii{$\m@th\bullet$}          
+
