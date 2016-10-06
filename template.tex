@@ -3,7 +3,18 @@
 \usepackage{color}
 \usepackage{german}
 \usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
 %\pagestyle{headings}
+
+% customize dictum format:
+\usepackage[T1]{fontenc}
+\setkomafont{dictumtext}{\itshape\small}
+\setkomafont{dictumauthor}{\normalfont}
+\renewcommand*\dictumwidth{\linewidth}
+\renewcommand*\dictumauthorformat[1]{--- #1}
+\renewcommand*\dictumrule{}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}\PackageWarning{TODO:}{#1!}}
 
 \begin{document}
 
