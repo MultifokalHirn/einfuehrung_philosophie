@@ -105,8 +105,67 @@ Klassisch in der Ontologie: Platonismus, Normalismus, Konzeptualismus
 transfinite Scheinaussage
 
 
-\section{Peano Arithmetik\\(28.10.16)}
+\section{Motivation \& Peano Arithmetik\\(28.10.16)}
 
+`Der Satz an der Tafel ist falsch'
+Bezeichner: `Der Satz an der Tafel'
+Bezeichner ist wahr
+$\rightarrow$ auch lowlevel gibt es dieses Paradox
+
+Dieser Satz ist falsch. --Lünersatz
+Dieser Satz ist nicht wahr. --verstärkter Lügnersatz
+
+Dieser Satz ist nicht beweisbar. -- goedel satz
+Dieser Satz ist nicht in T herleitbar. --T=eine Theorie
+Dieser Satz ist nicht herleitbar. --in allen Theorien
+TODO antinomie
+
+beweisbar hier rein logisch beweisbar
+herleitbar hier beweisbarkeit in logischer theorie
+
+PA hat das Ziel der maximalkonsistenz
+Dieser Satz ist nicht PA-herleitbar. --wenn der Satz nicht deutsch sondern in L(PA) ist, wären wir fertig
+\newline
+\textbf{Unser System:}
+
+$\langle~\neg$, $\rightarrow$, $\forall , v_{0},v_{1}, ... , v_{n}, \bar{0}$, $\bar{S}$, $\bar{+}$, $\bar{*}$, $\bar{<}$, $\bar{=}$, $\bar{(}$, $\bar{)}~\rangle$
+\newline
+\textbf{Metasprache:}
+
+doppelt gestrichene nicht,impication, all-quantor, x,x0...,z,y..., 0,S,+,*,<,element zeichen
+\newline
+\textbf{Axiome:}
+Vv0: nicht Sv0 = 0
+Vv0,v1: Sv0=Sv1->v0=v1
+Vv0: v0+0=v0
+Vv0v1: v0+Sv1 = S(v0+v1)
+Vv0: v0*0=0
+Vv0,v1: v0*Sv1 = v0*v1 + v0
+induktionsschema: sei q eine L(PA) formel dann ist q(0)andVv0:(q(v0)->q(Sv0))->Vv0:q(v0) eine instanz des induktionsschemas
+induktionsschema sind undendlich viele axiome... ;( but geht not otherwise
+schema != regel // schema ist eine menge von sätzen 
+PA := {q| q Formel aus L(PA) und AxPA |- q} --q ist formel und aus axiomen herleitbar
+
+coole Leute: 
+Moore, Goldfarb, Quine, Kalmar, Hilbert
+
+wichtiger crap:
+gebrauch-erwähnungsunterscheidung
+
+\section{Vorbemerkungen II\\(04.11.16)}
+
+\begin{itemize}
+  \item `$\bar{0}$' ist ein Numeral.
+  \item `$\bar{S}\bar{0}$' ist ein Numeral. (ein Konkatenat) Zeichen finden! kleiner schweif dazwischen
+  \item `$\bar{S}\bar{0}$' $=$ `$\bar{S}$' ?? `$\bar{0}$'
+  \item $0$ ist eine \emph{Instanz} einer nat"urlichen Zahl.
+  \item 
+\end{itemize}
+
+
+
+
+PA ist vollst"andig f"ur quantorenfreie S"atze.
 
 %\begin{figure}[h]
 %	\centering
