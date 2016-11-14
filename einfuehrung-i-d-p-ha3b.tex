@@ -1,0 +1,50 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[export]{adjustbox}
+\usepackage[authoryear,round]{natbib}
+\bibliographystyle{natdin}
+
+
+%\pagestyle{headings}
+
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{
+    \vspace{-35pt}
+	\includegraphics*[width=0.1\textwidth,left]{images/hu_logo2.png}\\
+	\vspace{-5pt}
+	Einf"uhrung in die Philosophie}
+\author{Lennard Wolf\\
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
+\maketitle
+%\vspace{0pt}
+
+\section*{AB 3b: Literaturrecherche in der Philosophie}
+\large
+\vspace{-5pt}
+\textbf{(1) Das Chinese Room Argument - Historische Schl"usseltexte}
+\nocite{*}
+\vspace{-10pt}
+\bibliography{einfuehrung-i-d-p-ha3b}
+\vspace{10pt}
+\noindent \textbf{(2) Recherchevorgehen}
+
+Ich kannte Searles \emph{Chinese Room} Argument durch einen Text von Douglas Hofstadter, in welchem er sich dar"uber sehr kritisch "au\ss ert. Ich schaute in der Wikipedia nach dem ersten Vorkommen des Arguments, welches in \citep*{searle1980minds} war. Auf den ersten Seiten wurde dort deutlich, dass er sich stark auf \citep*{schank1977goals} bezog und zudem auch vorhatte, durch seine Argumentation den \emph{Turing Test}, erstmals in \citep*{turing1950computing} vorgestellt, als unbrauchbar darzustellen. Douglas Hofstadter, der im Vorjahr einen Pulitzerpreis f"ur sein Buch \emph{G"odel, Escher, Bach: An Eternal Golden Braid}, welches sich mit f"ur diese `Diskussion' relevanten Themen besch"aftigte, skizziert in \citep*{Hofstadter1981} seine Gegenargumente zum \emph{Chinese Room}. Ich w"ahlte diesen Text, weil Hofstadter in verschiedenen Publikationen auf Searles Gedankenexperiment eingeht und es zu verwerfen versucht. Nach der starken Reaktion zum \emph{Chinese Room} ging Searle in \citep*{searle1987minds} auf die verschiedenen Gegenargumente ein und versuchte sie zu entkr"aften. 
+
+Zum zitieren nutzte ich meist Google Scholar, wo mir aber h"aufig Fehler auffielen, die es dann zu korrigieren galt (z.B. unwahrscheinliche Seitenangaben, Inkonsistenzen bei Namen, falsch geschriebene Publisher). Ich benutze \texttt{natdin} als \emph{bibliographystyle} in \LaTeX, da es den DIN Zitierformalia folgt.
+
+\end{document}
