@@ -1,0 +1,191 @@
+% Vorlage fuer Handouts
+% zum Seminar "Diskrete Geometrie und Kombinatorik -- ein topologischer Zugang"
+% im WS 2008/09
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allgemeine Hinweise
+% - Halten Sie den LaTeX-Code so uebersichtlich wie moeglich;
+%   (La)TeX-Fehlermeldungen sind oft kryptisch -- in einem ordentlich 
+%   strukturierten Quellcode lassen sich Fehler leichter finden und 
+%   beseitigen
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jedes LaTeX-Dokument muss eine \documentclass-Deklaration enthalten
+%   Diese sorgt fuer das allgemeine Seiten-Layout, das Aussehen der 
+%   Ueberschriften etc.
+\documentclass[a4paper,oneside,DIV8,10pt]{scrartcl}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Einbinden weiterer Pakete
+  \usepackage{german}    % fuer die deutschen Trennmuster
+  % \usepackage{ngerman} % entsprechend fuer die neue Rechtschreibung
+  \usepackage[latin1]{inputenc} % falls Sie Umlaute in den Quellen verwenden wollen
+  \usepackage{amsmath}   % enthaelt nuetzliche Makros fuer Mathematik
+  \usepackage{amsthm}    % fuer Saetze, Definitionen, Beweise, etc.
+  \usepackage{relsize}   % fuer \smaller 
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration eigener Mathematik-Makros
+  \newcommand{\N}{\ensuremath{\mathbf{N}}}   % natuerliche Zahlen
+  \newcommand{\Z}{\ensuremath{\mathbf{Z}}}   % ganze Zahlen
+  \newcommand{\Q}{\ensuremath{\mathbf{Q}}}   % rationale Zahlen
+  \newcommand{\R}{\ensuremath{\mathbf{R}}}   % reelle Zahlen
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration eigener Satz-/Definitions-/Beweisumgebungen mit amsthm
+  \newtheorem{satz}{Satz}[section]
+  \newtheorem{lemma}[satz]{Lemma}
+  \newtheorem{korollar}[satz]{Korollar}
+  \theoremstyle{definition}
+  \newtheorem{definition}[satz]{Definition}
+  \newtheorem{bemerkung}[satz]{Bemerkung}
+  \newtheorem{aufgabe}[satz]{Aufgabe}
+  \newenvironment{beweis}%
+    {\begin{proof}[Beweis]}
+    {\end{proof}}
+  \newtheorem{beispiel}[satz]{Beispiel}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration weiterer Makros
+  \renewcommand{\labelitemi}{--}             % aendert die Symbole bei unnumerierten Aufzaehlungen
+  \makeatletter                              % Fussnote ohne Symbol
+    \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+  % Titel des Handouts
+  %   #1 Name des Vortragenden
+  %   #2 email-Adresse 
+  %   #3 Datum des Vortrags
+  %   #4 Titel des Vortrags
+  \newcommand{\handouttitle}[4]
+   {\begin{center}
+      \Large #4
+    \end{center}
+
+    \bigskip
+
+    \noindent
+    #1 (\textsf{#2})
+    \hfill
+    #3%
+    \blfootnote{Seminar \glqq Diskrete Geometrie und Kombinatorik\grqq, 
+      WS~2008/2009, {\smaller WWU}~M\"unster}
+  
+    \noindent
+    \rule{\linewidth}{.5pt}
+
+    \bigskip
+
+    \@afterindentfalse\@afterheading
+   }
+  \makeatother
+  \renewcommand{\sectfont}{\normalfont}       % aendert den Font fuer Ueberschriften
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Anfang des eigentlichen Dokuments
+\begin{document}
+
+  % Titel fuer das Handout -- Sie koennen natuerlich auch selbst etwas entwerfen!
+  \handouttitle{V.~Ortragender}
+               {mail@turbospam.org}
+               {30.~Februar~2009}
+               {Gruppenoperationen}
+
+  Gruppenoperationen werden in den meisten Krankenh\"ausern mittlerweile
+  nicht mehr empfohlen. Satz~\ref{hauptsatz} zeigt jedoch, da\ss\
+  es immer noch zahlreiche Gruppenoperationen gibt.
+  
+  \section{Der Hauptsatz \"uber Gruppenoperationen}
+
+  \begin{satz}[Hauptsatz \"uber Gruppenoperationen]\label{hauptsatz}
+    Zu jeder Menge~$X$ und jeder Gruppe~$G$ gibt es eine
+    Grupenoperation von~$G$ auf~$X$.
+  \end{satz}
+  \begin{beweis}
+    Sei $X$ eine Menge und $G$ eine Gruppe. Dann ist
+    \begin{align*}
+      G \times X & \longrightarrow X \\
+      (g,x)      & \longmapsto     x
+    \end{align*}
+    eine Operation von~$G$ auf~$X$.
+  \end{beweis}
+
+  Auf dieselbe Art und Weise lassen sich nat\"urlich auch Lemmata und
+  Korollare etc.\ mit \LaTeX\ darstellen.
+
+  Bei Fragen zu \LaTeX\ ist der \emph{\LaTeX\ Companion}~\cite{companion} 
+  eine gro\ss e Hilfe; Sie k\"onnen sich aber auch gerne an Clara
+  L\"oh (\textsf{clara.loeh@uni-muenster.de}) wenden.
+
+  \section{Beispiele}
+
+  \begin{beispiel}
+    \hfil
+    \begin{itemize}
+      \item Hier ein Beispiel 
+      \item \dots und noch eins
+      \item \dots und noch eins
+    \end{itemize}
+  \end{beispiel}
+
+  \begin{aufgabe}
+    Vergessen Sie nicht, ein paar Aufgaben einzustreuen, an denen die
+    Teilnehmer nochmal ihre Kenntnisse \"uberpr\"ufen k\"onnen.
+  \end{aufgabe}
+
+  \begin{beispiel}
+    \hfil
+    \begin{enumerate}
+      \item Es gibt auch Beispiele, \dots
+      \item \dots die numeriert sind.
+    \end{enumerate}
+  \end{beispiel}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Literaturverzeichnis
+% - Der Einfachheit halber sind hier bereits alle Quellen eingetragen, 
+%   die im Seminarprogramm auftreten
+% - Bitte entfernen Sie alle Quellen, die Sie nicht in Ihrem Handout 
+%   zitieren
+% - Umgekehrt muessen Sie natuerlich, wenn Sie weitere Literatur
+%   zitieren wollen, die entsprechenden Quellen hier einfuegen; 
+%   hierbei kann www.ams.org/mathscinet helfen, die noetigen 
+%   Informationen zu den Quellen zu sammeln
+  \begin{thebibliography}{99}
+    \bibitem{book} M.~Aigner, G.M.~Ziegler, \emph{Proofs from The
+        Book}, dritte Auflage, Springer, 2004.
+
+    \bibitem{armstrong} M.A.~Armstrong, \emph{Basic Topology},
+      korrigierter Nachdruck des Originals von~1979, 
+      Undergraduate Texts in Mathematics, Springer, 1983.
+
+    \bibitem{diestel} R.~Diestel. \emph{Graph theory}, dritte Auflage, 
+      Graduate Texts in Mathematics, Band~173, Springer, 2005.
+
+    \bibitem{hatcher} A.~Hatcher. \emph{Algebraic Topology}, 
+      Cambridge University Press, 2002. 
+      Online verf\"ugbar unter
+      \textsf{http://www.math.cornell.edu/\~{}hatcher/}.
+
+    \bibitem{jaenich} K.~J\"anich. \emph{Topologie}, achte Auflage,
+      Springer, 2005.
+
+    \bibitem{borsuk} J.~Matou\v sek. \emph{Using the Borsuk-Ulam
+        Theorem}, Lectures on topological methods in combinatorics and
+      geometry. Written in cooperation with Anders Bj\"orner and G\"unter
+      M.~Ziegler, \emph{Universitext}, Springer, 2003.
+
+    \bibitem{companion} F.~Mittelbach, M.~Goossens, J.~Braams,
+      D.~Carlisle, C.~Rowley. \emph{The \LaTeX\ Companion}, zweite
+      Auflage, Addison-Wesley, 2004.
+
+    \bibitem{rudin} W.~Rudin. \emph{Real and complex analysis}, dritte
+      Auflage, McGraw-Hill Book Co., 1987.
+
+  \end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ende des Dokuments -- alles, was nach dieser Zeile steht, wird 
+% von LaTeX ignoriert!
+\end{document}

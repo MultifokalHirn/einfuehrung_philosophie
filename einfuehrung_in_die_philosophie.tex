@@ -1,4 +1,4 @@
-\documentclass[]{scrartcl}
+\documentclass[emulatestandardclasses]{scrartcl}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage[ngerman]{babel}
@@ -8,7 +8,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \newcommand{\todo}[1]{\textcolor{red}{TODO: #1}\PackageWarning{TODO:}{#1!}}
-
+\date{\vspace{-3ex}}
 \begin{document}
 
 \title{
@@ -20,7 +20,7 @@
           Philosophisches Institut I \\ 
           Humboldt Universit"at zu Berlin}
 \author{Lennard Wolf\\
-        \href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
 \maketitle
 \begin{abstract}
 
@@ -231,11 +231,8 @@ Fahrschule, man muss fahren, man tut alles richtig. H"atte man falsch gehandelt
   \item[Intention] Absicht  
 \end{description}
 
-\section{Metaphysik I: Was gibt es?\\(07.11.16)}
-
 \subsection{Tutorium}
 
-\textbf{}
 
 \begin{itemize}
   \item Korrekte Grammatik und Rechtschreibung (!!!)
@@ -243,14 +240,71 @@ Fahrschule, man muss fahren, man tut alles richtig. H"atte man falsch gehandelt
   \item Stilregeln:
   \item Indirekte Wiedergebe von Rede: Konjunktiv 2 zweifelt an, Konjunktiv 1 ist neutral | Ausnahme: \emph{Er sagt, dass andere Welten existieren w"urden.}
   \item \emph{Laut}, \emph{Zufolge}, \emph{Nach}
-  \item Anscheinend (Beste Theorie nach gegebenem Wissen), Scheinbar ()
+  \item Anscheinend (Beste Theorie nach gegebenem Wissen), Scheinbar (Zweifelnd)
+  \item Bei Rekonstruktion immer erst die Konklusion klar machen
 \end{itemize}
 
+\section{Erkenntnistheorie I: Was ist Wissen?\\(17.11.16)}
 
+\subsection{Auftakt}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Propositionelles Wissen}]
+  \item[Erkenntnis] Synonym zu Wissen
+  \item[Erkenntnistheorie] Philosophisches Nachdenken \emph{"uber} Wissen (Nicht \emph{Erweitern} von Wissen) | Fragen nach dem \emph{Wesen von Wissen}: Was haben die Dinge gemein, die sie zu Wissen macht? Was kann man (prinzipiell) wissen? Was ist der Unterschied zu Nichtwissen? | In der Neuzeit in Vordergrund ger"uckt, in der Antike mehr Metaphysisches, Ontologisches; denn: Wie k"onnen wir "uber Ontologie reden wenn wir nicht wissen, was wir wissen k"onnen? 
+  \item[Erfahrungswissen] Form des Satzes "`Sie wei"s, wie man Fahrrad f"ahrt."' ist \emph{Wissen Wie}, Erfahrungswissen | Ist das "uberhaupt \emph{Wissen}?
+  \item[Propositionelles Wissen] Form des Satzes "`Er wei"s, dass unser Sonnensystem 8 Planeten hat."' ist \\"`$S$ wei"s, dass $p$."' | Kernthema der Erkenntnistheorie
+  \item[Frage nach dem Wesen] "`Was ist das Wesen von $x$?"' $\rightarrow$ "`Etwas ist ein $x$ \emph{genau dann wenn} f"ur es $1$, $2$,..., $n$ der Fall ist."' | Hat ein Tisch Beine? -- Ein Tisch ist ein Tisch wenn er Beine hat und man was drauf stellen kann. Aber das gilt f"ur uns ja auch. | Eine Antwort setzt nicht vorraus dass es das gibt! (Beispiel Einhorn) Wenn man also nach dem Wesen des Wissens fragt macht man noch keine Existenzaussage.
+\end{description}
+
+\subsection{Klassische Wissenskonzeption}
+
+\textbf{Notwendige Bedingungen f"ur Wissen nach der klassischen Wissenskonzeption}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries $(1)$ Rechtfertigungi}]
+  \item[$(1)$ Meinung] "`$S$ ist der Meinung, dass $p$."' im Sinne von \emph{vermuten} | Ist Notwendige Bedingung denn wenn $S$ nicht von $p$ "uberzeugt ist, w"urde $S$ auch nicht sagen, dass sie wei"s, dass $p$.
+  \item[$(2)$ Wahrheit] "`$p$ ist wahr."' | Ist notwendig, da "`$S$ wei"s, dass $p$, aber $p$ ist falsch."' sinnlos ist. (Beispiel: "`Fr"uher wussten die Leute, dass die Erde eine Scheibe ist."' w"are nur sinnig, wenn die Erde auch fr"uher eine Scheibe war.)
+  \item[$(3)$ Rechtfertigung] "`$S$ ist in der Meinung, dass $p$, gerechtfertigt."' | N"otig denn Meinung und Wahrheit sind noch nicht hinreichend, denn Zufallstreffer etc. sind ja kein \emph{Wissen}. 
+\end{description}
+
+Die Bedingungen $(1)$, $(2)$ und $(3)$ f"ur den \emph{Justfied True Belief} (Wahre, gerechtfertigte Meinung) sind gemeinsam hinreichend. Das hei"st:
+
+"`$S$ wei"s, dass $p$."' \hspace{1mm} $\Leftrightarrow$ \hspace{2mm}"`$S$ ist der Meinung, dass $p$."' $\wedge$
+
+\hspace{35mm} "`$p$ ist wahr."' $\wedge$
+
+\hspace{36mm}"`$S$ ist in der Meinung, dass $p$, gerechtfertigt."'
+
+\subsection{Der Einwand von Edmund Gettier}
+
+\textbf{Gettiers Argument} (aus \emph{Is Justfied True Belief Knowledge?})
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Gegenbeispiel 2}]
+  \item[Pr"amisse 1] Rechtfertigung impliziert nicht Wahrheit; $(2)$ und $(3)$ sind unabh"angig
+  \item[Pr"amisse 2] Wenn $S$ in der Meinung, dass $p$, gerechtfertigt ist, und wenn $q$ aus $p$ logisch folgt, und wenn $S$ aufgrund dieser Tatsache die Meinung, dass $q$, annimmt, dann ist $S$ auch in der Meinung, dass $q$, gerechtfertigt.
+  \item[Gegenbeispiel 1] (\emph{Er wurd der `gegettiert'.})
+  \item[Gegenbeispiel 2] 
+\end{description}
+
+\subsection{Reaktionen auf Gettiers Einwand}
+
+Einfach L"osungen scheint es nicht zu geben.
 \begin{itemize}
-  \item Bei Rekonstruktion immer erst die Konklusion klar machen
+  \item Dass Rechtfertigung Wahrheit impliziert schraubt Anforderungen an Wissen zu hoch ???
   \item 
 \end{itemize}
+
+\textbf{L"osungsstrategien}
+
+Einfach L"osungen scheint es nicht zu geben.
+\begin{itemize}
+  \item Gettierologie: Die Suche nach der vierten Bedingung
+  \item Kausale Wissenskonzeption: 
+\end{itemize}
+
+
+
+
+\section{Erkenntnistheorie II: Was k"onnen wir wissen?\\(23.11.16)}
 
 \newpage
 \section{"Uber den Professor}

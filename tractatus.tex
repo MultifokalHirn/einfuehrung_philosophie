@@ -1,4 +1,4 @@
-\documentclass[]{scrartcl}
+\documentclass[emulatestandardclasses]{scrartcl}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage[dvipsnames]{xcolor}
@@ -9,6 +9,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \newcommand{\todo}[1]{\textcolor{red}{TODO: #1}\PackageWarning{TODO:}{#1!}}
+\date{\vspace{-3ex}}
 \begin{document}
 
 \title{
@@ -20,7 +21,7 @@
           Philosophisches Institut I \\ 
           Humboldt Universit"at zu Berlin}
 \author{Lennard Wolf\\
-        \href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
 \maketitle
 \begin{abstract}
 
