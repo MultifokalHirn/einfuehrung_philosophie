@@ -1,0 +1,50 @@
+% Encoding: UTF-8
+
+@Article{turing1950computing,
+  author    = {Turing, Alan M},
+  title     = {Computing machinery and intelligence},
+  year      = {1950},
+  volume    = {59},
+  number    = {236},
+  pages     = {433--460},
+  journal   = {Mind},
+  publisher = {JSTOR},
+}
+
+@Article{schank1977goals,
+  author  = {Schank, Roger C and Abelson, Robert P},
+  title   = {Goals, and Understanding: an inquiry into human knowledge structures},
+  year    = {1977},
+  journal = {Hillsdale, N.J.: Lawrence Erlbaum Press},
+}
+
+@Article{searle1980minds,
+  author    = {Searle, John R},
+  title     = {Minds, brains, and programs},
+  year      = {1980},
+  volume    = {3},
+  number    = {03},
+  pages     = {417--424},
+  journal   = {Behavioral and Brain Sciences},
+  publisher = {Cambridge University Press},
+}
+
+@Article{searle1987minds,
+  author    = {Searle, John R},
+  title     = {Minds and brains without programs},
+  year      = {1987},
+  pages     = {209--233},
+  journal   = {Mindwaves},
+  publisher = {Blackwell Oxford},
+}
+
+@InCollection{Hofstadter1981,
+  author    = {Douglas R. Hofstadter},
+  title     = {Reflections on Searle},
+  booktitle = {The Mind's I},
+  year      = {1981},
+  editor    = {Douglas R. Hofstadter and Daniel C. Dennett},
+  publisher = {Basic Books},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
