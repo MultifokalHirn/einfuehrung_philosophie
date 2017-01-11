@@ -1,0 +1,62 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{bussproofs}
+\usepackage[export]{adjustbox}
+%\pagestyle{headings}
+
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{
+    \vspace{-30pt}
+	\includegraphics*[width=0.1\textwidth,left]{images/hu_logo2.png}\\
+	\vspace{-10pt}
+	Einf"uhrung in die Philosophie}
+\author{Lennard Wolf\\
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
+\maketitle
+\vspace{0pt}
+
+\section*{AB 9: Englische Texte lesen / Argumente rekonstruieren}
+\large
+
+%\vspace{10pt}
+\noindent\textbf{(ii)}\\
+\noindent Jackson zufolge besagt der Physikalismus, dass es nichts gibt, das nicht physikalisch ist.\\
+
+\noindent\textbf{(iii)}\\
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries M $\rightarrow \neg$P1}]
+  \item[P] Es gibt nichts, das nicht physikalisch ist. (Physikalismus)
+  \item[P1] Alle m"oglichen richtigen Informationen k"onnen sich nur auf das Physikalische beziehen. 
+  \item[P $\rightarrow$ P1] Wenn es nichts gibt, das nicht physikalisch ist, dann k"onnen sich alle m"oglichen richtigen Informationen nur auf das Physikalische beziehen.
+  \item[M] Wenn Mary, die alles (physikalische) was es "uber Farben zu wissen gibt wei"s, das erste Mal Farben sieht, lernt sie etwas dazu.
+  \item[M $\rightarrow \neg$P1] Wenn Mary etwas dazu lernt, dann gibt es Informationen, die sich nicht auf das Physikalische beziehen.
+  \item[$\neg$P1] Es gibt Informationen, die sich nicht auf das Physikalische beziehen. 
+  \item[K] Es gibt Dinge, die nicht physikalisch sind. (\emph{$\neg$P, modus tollens})
+\end{description}
+
+\begin{prooftree}  \AxiomC{$P \rightarrow P1$}
+  \AxiomC{$M$}
+  \AxiomC{$M \rightarrow \neg P1$}
+  \BinaryInfC{$\neg P1$}  \BinaryInfC{$\neg P$}\end{prooftree}
+
+
+\noindent\textbf{(iv)}\\
+\noindent Ich halte diese Argumentation aus folgendem Grund f"ur nicht "uberzeugend: Nur weil wir eine Information, die sich auf das Qualia bezieht, nicht \emph{ausdr"ucken k"onnen}, hei"st das noch lange nicht, dass sie sich nicht am Ende trotzdem auf etwas Physikalisches bezieht. 
+
+Von der Meinung, dass Informationen dar"uber, \emph{wie etwas ist}, sich nicht am Ende trotzdem auf etwas Physikalisches \emph{bezieht}, bin ich nicht "uberzeugt. Vielmehr unterstelle ich, dass unsere eingeschr"ankten Sinne und Denkf"ahigkeiten uns nur daran hindern, so etwas zu "`denken"' und auszudr"ucken. Ich unterstelle daher, dass Mary eben nicht \emph{alle} physikalischen Informationen "uber Farben kannte, geschweige denn "uberhaupt kennen \emph{konnte}.
+
+\end{document}
