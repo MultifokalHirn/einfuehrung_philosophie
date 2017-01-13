@@ -1,0 +1,101 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{bussproofs}
+\usepackage[export]{adjustbox}
+%\pagestyle{headings}
+
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{
+    \vspace{-30pt}
+	\includegraphics*[width=0.1\textwidth,left]{images/hu_logo2.png}\\
+	\vspace{-10pt}
+	Einf"uhrung in die Philosophie}
+\author{Lennard Wolf\\
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
+\maketitle
+\vspace{0pt}
+
+\section*{AB 10: Beispielklausur}
+\large
+
+\subsection*{Aufgabenteil A}
+
+%\vspace{10pt}
+\noindent\textbf{(A1)}\\
+\noindent Die Argumentation ist aufgrund der g"ultigen Anwendung von \emph{Modus Tollens} g"ultig (Sei $P1 \leftrightarrow (P\rightarrow P2)$ und $K \leftrightarrow \neg P$):
+\begin{prooftree}  \AxiomC{$P \rightarrow P2$}
+  \AxiomC{$\neg P2$}  \BinaryInfC{$\neg P$}\end{prooftree}
+
+\noindent\textbf{(A2)}\\
+\noindent Alles\\
+
+\noindent\textbf{(A3)}\\
+\noindent Inkompatibilismus\\
+
+\noindent\textbf{(A4)}\\
+\noindent Es k"onnte eine neue Wissensdefinition erarbeitet werden, in der die Rechtfertigungsbedingung durch eine andere ersetzt wird.\\ 
+
+\noindent\textbf{(A5)}\\
+\noindent (a) Alle Kugeln sind geometrische Formen.\\
+\noindent (b) Alle Kugeln sind braun.\\
+
+\noindent\textbf{(A6)}\\
+\noindent Nein.\\
+
+\noindent\textbf{(A7)}\\
+\noindent Der Induktivismus besagt, dass wissenschaftliche Theorien durch empirische Untersuchungen "`bewiesen"' werden k"onnen. Der Name kommt daher, dass aus einer endlichen Menge an Testf"allen durch \emph{Induktion} auf eine Gesetzm"a"sigkeit geschlossen werden kann.\\
+
+\noindent\textbf{(A8)}\\
+\noindent "`Elon Musk"', "`der Gr"under von SpaceX"'\\
+
+\noindent\textbf{(A9)}\\
+\noindent Kennzeichnungen bestehen am Ende auch nur aus Namen, und daher w"urde man "`Elon Musk"' zwar mit "`der Gr"under von SpaceX"' ersetzen, doch nun m"usste man "`Gr"under"' und "`SpaceX"' auch wieder ersetzen, wodurch es zu einem unendlichen Regress k"ame.\\
+
+\noindent\textbf{(A10)}\\
+\noindent Wahrheit bezieht sich auf Aussagen "uber das Bestehen und Nichtbestehen von Tatsachen in der Welt. Ein Satz wie  "`Harry Potters Eltern wurden umgebracht"', der f"ur viele intuitiv als wahr gelten w"urde, kann aber genauso gut als falsch angesehen werden, weil es Stellen in den B"uchern gibt, in denen die entsprechende Tatsache noch nicht besteht. Da dieser Satz also eine kontextuelle Spezifizierung br"auchte, um einen klaren Wahrheitshert zu erhalten, kann nicht gesagt werden, dass \emph{alle} S"atze einen Wahrheitswert tragen.\\
+
+\noindent\textbf{(A11)}\\
+\noindent Epiph"anomenalismus betrachtet geistige Vorg"ange (Gedanken etc.) als durch k"orperliche Vorg"ange (das "`Feuern"' von Neuronen etc.) verursacht, w"ahrend erstere keine entgegengesetzte Wirkung auf den K"orper haben k"onnen. Trotzdem sieht er Geist und K"orper als getrennt an, ist also eine spezielle Form des Dualismus.\\
+
+\noindent\textbf{(A12)}\\
+\noindent Die Kernthese hedonistischer Werttheorien ist...\\
+
+\subsection*{Aufgabenteil B}
+
+\noindent\textbf{(B1)}\\
+\noindent Es w"urde sich um einen Gettier-Fall handeln, wenn Peter zu einem anderen Zeitpunkt tats"achlich einen Elefanten gesehen hat und diesen wiederum irrt"umlich f"ur einen Felsbrocken gehalten hat.\\
+
+\noindent\textbf{(B2)}\\
+\noindent Die folgende Argumentation m"ochte die Ausgangsthese $(P)$ widerlegen:
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (M $\rightarrow \neg$P1)}]
+  \item[(P)] Es gibt nichts, das nicht physikalisch ist. (Physikalismus)
+  \item[(P $\rightarrow$ P1)] Wenn es nichts gibt, das nicht physikalisch ist, dann k"onnen sich alle m"oglichen richtigen Informationen nur auf das Physikalische beziehen.
+  \item[(M)] Wenn Mary, die alles (physikalische) was es "uber Farben zu wissen gibt wei"s, das erste Mal Farben sieht, lernt sie etwas dazu.
+  \item[(M $\rightarrow \neg$P1)] Wenn Mary etwas dazu lernt, dann gibt es richtige Informationen, die sich nicht auf das Physikalische beziehen.
+  \item[($\neg$P1)] Es gibt richtige Informationen, die sich nicht auf das Physikalische beziehen.\\ (\emph{Modus Ponens} aus $(M \rightarrow \neg P1)$ und $(M)$)
+  \item[(K)] Es gibt Dinge, die nicht physikalisch sind.\\ (\emph{Modus Tollens} aus $(P \rightarrow P1)$ und $(\neg P1)$)
+\end{description}
+
+%\begin{prooftree}%  \AxiomC{$P \rightarrow P1$}
+%  \AxiomC{$M$}
+%  \AxiomC{$M \rightarrow \neg P1$}
+%  \BinaryInfC{$\neg P1$}%  \BinaryInfC{$\neg P$}%\end{prooftree}
+
+
+\end{document}
