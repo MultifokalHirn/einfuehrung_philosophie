@@ -1,5 +1,6 @@
 \documentclass[a4paper, emulatestandardclasses, 12pt]{scrartcl}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{fullpage}
 %\usepackage{parskip}
 \usepackage{color}
@@ -24,7 +25,7 @@
 \title{\vspace{5ex}
 	\includegraphics*[width=0.72\textwidth]{images/hu_logo.png}\\
 	\vspace{30pt}
-	\scshape\LARGE{Die Form als Grundlage der Abbildbarkeit in Wittgensteins Tractatus [AT]}}
+	\scshape\LARGE{Die Form als Verbindung von Sprache und Realit"at in Wittgensteins Tractatus [AT]}}
 	
 	\subtitle{\vspace{20pt}Seminar zu Wittgensteins Tractatus logico-philosophicus\\
 	\vspace{6pt}
@@ -61,9 +62,9 @@
 
 \noindent\textbf{$(o)$ Einleitung}
 
-\noindent In seinem Tractatus logico-philosophicus \citep{wittgenstein1963tractatus} beschreibt Wittgenstein seine Theorie, wie es f"ur sprachliche Aussagen m"oglich ist, Tatsachen in der Welt abbilden zu k"onnen. In seinem Vorwort zu der ersten Ausgabe des Tractatus schrieb Bertrand Russell, dass diese Theorie die Grundlage f"ur Wittgensteins Kritik an der traditionellen Philosophie ist, nach welcher eben das Unwissen "uber das Prinzip der Korrespondenz zwischen Welt und Bild zu sinnlosen und unsinnigen philosophischen Theorien und Fragestellungen gef"uhrt hat (vgl. XXX).
+\noindent Im Tractatus logico-philosophicus \citep{wittgenstein1963tractatus} beschreibt Wittgenstein seine Theorie, wie es f"ur sprachliche Aussagen m"oglich ist, Tatsachen in der Welt abbilden zu k"onnen. Bertrand Russell schrieb in seiner Einf"uhrung zu der ersten englischsprachigen Ausgabe, dass diese Theorie die Grundlage f"ur Wittgensteins Kritik an der traditionellen Philosophie sei, derzufolge das Unwissen "uber die Art der "Ubereinstimmung von Realit"at und Sprache zu den bisherigen Theorien und Fragestellungen gef"uhrt hat \cite[vgl.][S. 7]{wittgenstein1922tractatus}. Doch Wittgensteins Thesen sind nicht nur wegen der daraus folgenden Kritik so interessant, sondern weil sie gerade eine fundamentale Theorie "uber die "`Harmonie"' zwischen Sprache und Realit"at darstellen \cite[vgl.][S. 1]{emiliani1999formsp}.
 
-In dieser Hausarbeit m"ochte ich das Konzept der \emph{Form} n"aher erl"autern und zeigen, wie es die Grundlage schafft f"ur Wittgensteins Theorie der Abbildbarkeit von Sachverhalten durch Bilder, beziehungsweise Aussagen. Zudem versuche ich zu zeigen, wie anhand dieser Theorie die Begriffe "`sinnvoll"', "`sinnlos"', "`wahr"', "`falsch"' und "`unsinnig"' im Tractatus zu verstehen sind.
+In dieser Hausarbeit m"ochte ich das Konzept der \emph{Form} erl"autern und zeigen, wie es die Grundlage schafft f"ur Wittgensteins Theorie der Abbildbarkeit von Realit"at durch Sprache. Zudem versuche ich zu zeigen, wie anhand dieser Theorie die Begriffe "`sinnvoll"', "`sinnlos"', "`wahr"', "`falsch"' und "`unsinnig"' im Tractatus zu verstehen sind.
 
 %Daf"ur entwickelt er das Konzept der \emph{Form}, welches ihm zufolge die Grundlage f"ur die M"oglichkeit von Abbildung darstellt. Diese Idee m"ochte ich daher in dieser Hausarbeit näher erl"autern und zeigen, wie damit die Begriffe "`sinnvoll"', "`sinnlos"', "`wahr"', "`falsch"' und "`unsinnig"' zu verstehen sind. 
 
@@ -89,66 +90,75 @@ Daf"ur werde ich wie folgt vorgehen. In Abschnitt $(i)$ werde ich die f"ur das V
 %Diese von Wittgenstein als "`Gegenst"ande"' bezeichneten Atome sind ein Grundbaustein der "Uberlegungen der Denker*innen des logischen Atomismus. Jene versuchten, ein Verst"andnis der Welt zu erlangen, welches komplett mit Logik vereinbar und beschreibbar ist, 
 Diese von Wittgenstein als "`Gegenst"ande"' bezeichneten Atome sind f"ur ihn allein durch logische "Uberlegungen zu erreichen und nicht durch physikalische Analysen\footnote{"`In Russell's opinion, what makes it appropriate to speak of logical atomism is that the atoms in question are to be arrived at by logical rather than physical analysis"' \citep{sep-wittgenstein-atomism}.}, weshalb sie auch als \emph{logischen Atome} bezeichnet werden k"onnen.\footnote{"`Logical atoms are the ultimate entities reached by the analysis of situations"' \cite[S. 47]{frascolla2007understanding}. Die Meinung, dass fundamentale Gegenst"ande tats"achlich existieren, schien Wittgenstein jedoch nicht schon immer klar vertreten zu haben: "`Wittgenstein's 1914–-1916 Notebooks bear witness to his incessant and tormented labour on the question of the existence of logically ultimate components of reality. Nonetheless, every doubt and hesitation appears to be overcome in the Tractatus"' \cite[S. 48]{frascolla2007understanding}.} %\emph{Wie} genau Farbigkeit, Masse etc. durch die Verbindung von Gegenst"anden entsteht, ist nicht 
 
-\emph{Bilder} sind im Tractatus nicht nur als visuelle Darstellung zu verstehen, sondern als jeder Art Abbildung von Sachverhalten. Wittgenstein befasst sich im Speziellen mit sprachlichen Aussagen, beziehungsweise \emph{S"atzen}, die entsprechend eine Art von Bildern sind \cite[vgl.][S. 66]{mcguinness2002approaches}. Das rein logische Bild ist der \emph{Gedanke}, welcher sich im Satz sinnlich wahrnehmbar ausdr"uckt (siehe 3, 3.1). Ein Bild stellt einen Sachverhalt genau dann (erfolgreich) dar, wenn eine \emph{abbildende Beziehung}, also eine Zuordnung, zwischen den Elementen des Bildes und den Gegenst"anden des dargestellten Sachverhaltes besteht (siehe 2.13, 2.1513, 2.1514). Dies ist dann m"oglich, wenn Bild und Sachverhalt die \emph{Form der Abbildung} gemeinsam haben (siehe 2.17).%, was im n"achsten Abschnitt n"aher erl"autert wird. 
+\emph{Bilder} sind im Tractatus nicht nur als visuelle Darstellung zu verstehen, sondern als jeder Art Abbildung von Sachverhalten. Wittgenstein befasst sich im Speziellen mit sprachlichen Aussagen, beziehungsweise \emph{S"atzen}, die entsprechend eine Art von Bildern sind \cite[vgl.][S. 66]{mcguinness2002approaches}. Das rein logische Bild ist der \emph{Gedanke}, welcher sich im Satz sinnlich wahrnehmbar ausdr"uckt (siehe 3, 3.1). Ein Bild stellt einen Sachverhalt genau dann (erfolgreich) dar, wenn eine \emph{abbildende Beziehung}, also eine Zuordnung, zwischen den Elementen des Bildes und den Gegenst"anden des dargestellten Sachverhaltes besteht (siehe 2.13, 2.1513, 2.1514). Dies ist dann m"oglich, wenn Bild und Sachverhalt die \emph{Form der Abbildung} gemeinsam haben (siehe 2.17). Ziel dieser Hausarbeit wird es unter anderem sein, dieses Konzept zu erkl"aren. 
+
+Die im Tractatus zentral behandelten Arten von Bildern sind Gedanken und S"atze, also sprachliche Aussagen. Im weiteren Verlauf dieser Hausarbeit werde ich mich auch nur noch auf diese beziehen.
 
 
 \vspace{5mm}
 \noindent\textbf{$(ii)$ Die Form}	
 
-\noindent Die Benennung als philosophisch-\emph{logische} Abhandlung weist schon darauf hin, dass das Werk gro"steilig unter dem Gesichtspunkt der Logik zu betrachten ist. Wie genau Gegenst"ande und ihre Verbindungen zu Tatsachen Ph"anomene wie Raum, Zeit, Masse und Energie in der Welt hervorbringen wird nicht behandelt, weil es dabei wahrscheinlich um empirische Erkenntnisse ginge, und nicht um philosophisch-logische. So ist auch die Form eines Gegenstands nicht als seine bestimmt geformte Ausbreitung im Raum zu verstehen, sondern als eine rein \emph{logische Eigenschaft} des \emph{logischen Atoms} Gegenstand, daher auch "`logische Form"' genannt (XXX???). Es ist nat"urlich denkbar, dass die Form eines Gegenstands auch seine bestimmt geformte Ausbreitung im Raum \emph{zur Folge} haben k"onnte, doch w"are dies ausschlie"slich ein Epiph"anomen und au"serhalb des Themenbereichs des Tractatus. 
+\noindent Beim Tractatus handelt es sich um eine \emph{philosophisch-logische} Abhandlung, und so sind die Gedanken in diesem Werk logischer Natur, nicht naturwissenschaftlicher. Wie genau Gegenst"ande und ihre Verbindungen zu Tatsachen Ph"anomene wie Raum, Zeit, Masse und Energie in der Welt hervorbringen wird nicht behandelt, weil es dabei um empirische Erkenntnisse ginge, und nicht um philosophisch-logische. So ist auch die Form eines Gegenstands nicht als seine bestimmt geformte Ausbreitung im Raum zu verstehen, sondern als eine rein \emph{logische Eigenschaft} des \emph{logischen Atoms} Gegenstand. Es ist nat"urlich denkbar, dass die Form eines Gegenstands auch seine bestimmt geformte Ausbreitung im Raum \emph{zur Folge} haben k"onnte, doch w"are dies ausschlie"slich ein Epiph"anomen (???) und au"serhalb des Themenbereichs des Tractatus. 
 
 Jedoch haben nicht nur Gegenst"ande eine Form, sondern auch die Elemente von Bildern, wie zum Beispiel Namen oder sprachliche Ausdr"ucke im Allgemeinen. Wenn von der Form eines Gegenstands oder Bildelements die Rede ist, wird damit auf seine kombinatorischen M"oglichkeiten mit anderen Gegenst"anden/Bildelementen zu Sachverhalten beziehungsweise Bildern hingewiesen \cite[vgl.][S. 84]{emiliani1999formsp}. Die Form eines sprachlichen Ausdrucks w"are durch die Grammatik der benutzten Sprache bestimmt und liesse sich durch S"atze in denen er vorkommt \emph{zeigen}. Die Form eines Gegenstandes w"urde sich ebenso durch die Sachverhalte, in denen er vorkommt, \emph{zeigen}. Man k"onnte sie jeweils jedoch nicht beschreiben, denn "`um die logische Form darstellen zu k"onnen, m"ussten wir uns mit dem Satze au"serhalb der Logik aufstellen k"onnen, das hei"st au"serhalb der Welt"' (siehe 4.12). 
 
 
-\begin{itemize}
-  \item was ist logische form
-  \item da die logik sich in der welt zeigt und wir keine unlogischen sätze sagen können muss alles eine logische form haben das darstellbar sein kann
-  \item wittgenstein unterteilt die logische form in mehrere unterarten:
-  \item was ist Form der Abbildung
-  \item Form der Abbildung -> r"aumliches Bild kann r"aumliches Darstellen vgl Emil s 83
-  \item logische form ist verallgemeinerung der Form der Abbildung (vllt eher abbildende Form: pictorial Form)
-  \item um etwas darstellen zu können müssen wir die form verstehen, diese zeigt sich in der welt. alles was außerhalb der (möglichen)welt(en) ist hat in dem sinne keine form und lässt sich entsprechend nicht darstellen
-\end{itemize}
-
-
-
-Die Vorraussetzung daf"ur, dass ein Bild einen Sachverhalt darstellen kann, ist die gemeinsame \emph{Form der Abbildung} von Bild und Sachverhalt. 
-
-
-Die M"oglichkeit seines Vorkommens in Sachverhalten, ist die Form des Gegenstandes. (2.0141)
-
-2.2
-Das Bild hat mit dem Abgebildeten die logische Form der Abbildung gemein.
-
-Form der Abbildung: 2.15
-
-Gemeinsamkeit
-
-\vspace{5mm}
-\noindent\textbf{$(iii)$ Die Verbindung von Bild und Tatsache}	
-
-\noindent Motivation: what relation must one fact (such as a sentence) have to another in order to be capable of being a symbol for that other? This last is a logical question, and is the one with which Mr Wittgenstein is concerned. He is concerned with the conditions for accurate Symbolism, i.e. for Symbolism in which a sentence `means' something quite definite. - russell
-
-Ein Satz soll also eine definitive Bedeutung haben. Wie kommt es zu dieser? 
-
-\noindent "`a thought represents a situation by means of a double mechanism: (1) the elements of the thought play the role of being proxy for the components of the situation; and (2) the logical form of the situation is absorbed and reproduced in the structure of the thought (the distinction form/structure corresponds to the distinction possibility/actuality)"' \cite[S.46]{frascolla2007understanding}
-
-SILF s. 85 forms of sense: Syntax/Grammatik hat die Aufgabe den sprachlichen Ausdr"ucken den selben Kombinationsraum zu geben wie die ihn die korrespondierenden Gegenst"ande haben. Die grammatik gibt dem Ausdruck also seine logische Form. Entsprechend sind unm"ogliche Gegenstandsverbindungen/Sachverhalte sprachlich nicht korrekt auszudr"ucken. "Es kann nichts unlogisches gedacht werden"-Zitat
+%\begin{itemize}
+%  \item was ist logische form - jedenfalls wird sprachlichelogik, oder grammatische logik verwechselt mit tatsächlicher logik 
+%  \item da die logik sich in der welt zeigt und wir keine unlogischen sätze sagen können muss alles eine logische form haben das darstellbar sein kann
+%  \item Form der Abbildung: r"aumliches Bild kann r"aumliches Darstellen vgl Emil s 83
+%  %\item logische form ist verallgemeinerung der Form der Abbildung (vllt eher abbildende Form: pictorial Form)
+%\end{itemize}
 
 
 \vspace{5mm}
-\noindent\textbf{$(iv)$ Abbildungen}	
+\noindent\textbf{$(iii)$ Die Verbindung von Sprache und Realit"at}	
+\vspace{3mm}
+\begin{addmargin}[.065\linewidth]{.065\linewidth}% indent 0pt left, .5\linewidth right
+\footnotesize
+
+\noindent \emph{"`What relation must one fact (such as a sentence) have to another in order to be capable of being a symbol for that other? This last is a logical question, and is the one with which Mr Wittgenstein is concerned. He is concerned with the conditions for accurate Symbolism, i.e. for Symbolism in which a sentence `means' something quite definite."'} -- Bertrand Russell \cite[S. 7]{wittgenstein1922tractatus}
+
+\end{addmargin}
+\normalsize
+\vspace{3mm}
+
+Es scheint vern"unftig zu sein, anzunehmen, dass es eine "`Verbindung"' zwischen Sprache und Realit"at gibt \cite[vgl.][S. 1 f.]{emiliani1999formsp}. Wenn ein Satz eine Situation beschreibt, so muss er doch mit ihr verbunden sein, oder wenigstens etwas mit ihr gemein haben, oder ihr "ahnlich sein (vgl. 4.03, 2.16, 2.161). F"ur Wittgenstein stellte sich aus dieser intuitiven Annahme die Frage, worin diese Verbindung besteht. Er war der Meinung, dass eine Sprache, die etwas "`"uber die Welt ausdr"ucken kann, gewisse Eigenschaften der Welt vermittels dieser Eigenschaften, die sie besitzen mu"s"', \emph{spiegele} \cite[siehe][S. 209]{wittgenstein1963tractatus}. Das hei"st, dass Sprache und Welt gemeinsame Eigenschaften haben m"ussen, und diese meint Wittgenstein in der \emph{logischen Form der Abbildung} gefunden zu haben (siehe 2.2). Der Satz ist die sinnlich wahrnehmbare Form des Gedankens, des \emph{logischen Bildes der abgebildeten Tatsache} (siehe 4.03).
+
+Doch wie repr"asentiert eine Gedanke, das logische Bild der Tatsache, diese? \citet{frascolla2007understanding} zufolge tut er dies durch einen Doppelmechanismus: Erstens stehen die Elemente des Gedankens als Symbole f"ur die Elemente der Tatsache ein und zweitens wird die logische Form der Tatsache von der logischen Struktur des Gedankens reproduziert.\footnote{Sinngem"a"se "Ubersetzung des Autors von "`a thought represents a situation by means of a double mechanism: (1) the elements of the thought play the role of being proxy for the components of the situation; and (2) the logical form of the situation is absorbed and reproduced in the structure of the thought (the distinction form/structure corresponds to the distinction possibility/actuality)"' \cite[S.46]{frascolla2007understanding}} Diese beiden Mechanismen, die es der Sprache erm"oglichen, die Welt zu \emph{spiegeln}, m"ussen nun genauer gekl"art werden.
+
+WIE KANN EIN SYMBOL EIN ELEMENT SYMBOLISIEREN? logische form
+
+Das grammatikalische Symbol muss die selbe logische Form wie das korrespondierende Element im dargestellten Sachverhalt haben. Beispiel.
+
+WIE KANN DIE STRUKTUR EINES GEDANKEN DIE LOGISCHE FORM REPRODUZIEREN? f. d. abbildung
+
+
+
+
+%SILF s. 85 forms of sense: Syntax/Grammatik hat die Aufgabe den sprachlichen Ausdr"ucken den selben Kombinationsraum zu geben wie die ihn die korrespondierenden Gegenst"ande haben. Die grammatik gibt dem Ausdruck also seine logische Form. Entsprechend sind unm"ogliche Gegenstandsverbindungen/Sachverhalte sprachlich nicht korrekt auszudr"ucken. "Es kann nichts unlogisches gedacht werden"-Zitat
+
+
+\vspace{5mm}
+\noindent\textbf{$(iv)$ Sinnvolle und sinnlose S"atze}	
 
 2.21
 Das Bild stimmt mit der Wirklichkeit überein oder nicht; es ist richtig oder unrichtig, wahr oder falsch.
 
 \vspace{5mm}
-\noindent\textbf{$(iv)$ Unsinn}	
+\noindent\textbf{$(v)$ Unsinnige S"atze und Unsagbares}	
 
-Ein Satz soll also eine definitive Bedeutung haben, doch was sind S"atze ohne solch eine definitive Bedeutung? Was ist der Unterschied zu solchen die eine haben?
+Ein Satz soll also eine definitive Bedeutung haben, doch was sind S"atze ohne solch eine definitive Bedeutung? Was ist der Unterschied zu solchen die eine haben? MN 209
 
 Um die logische Form darstellen zu können, müssten wir uns mit dem Satze außerhalb der Logik aufstellen können, das heißt außerhalb der Welt. 4.12
 
+\vspace{5mm}
+\noindent\textbf{$(vi)$ Kritik?}	
+
+Problem ist dass nicht erkennbar ist ob Sprache tatsächlich die EIgenschaften der Welt spiegelt. Unsere Gehirne nehmen selektiv war und geben, wie auch andere Tiere, DIngen Bedeutung je nachdem wie wichtig und unwichtig sie für unser überleben sind. Beispiel: Frosch such nur nach etwas kleinem das sich bewegt (Insekt) und ist sehr leicht täuschbar, denn im Normalfall reicht diese Wahrnehmung. DIese Selektivität in der Wahrnehmung könnte großen einfluss auf unsere Sprache haben, da diese also vielmehr die \emph{Realität unserer Wahrnehmung} spiegeln würde, als die tatsächliche Realit"at!
+
+\vspace{5mm}
+\noindent\textbf{$(vii)$ Konklusion}
 
 \end{onehalfspace}
 \nocite{*}
