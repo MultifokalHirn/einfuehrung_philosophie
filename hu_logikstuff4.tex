@@ -1,0 +1,337 @@
+
+\usepackage{rotating}
+\usepackage{qtree}
+%\usepackage{KMcalc} %Lennard
+
+%allgemeine Einstellungen:
+%\setlength{\parindent}{0em}
+\makeatletter 
+\renewcommand{\KMline}[3][]
+{
+\g@addto@macro\KMboxI{\refstepcounter{KMlineNumber}\if#1\empty\relax\else\label{#1}\fi
+\hbox to \wd\KMtempboxA{\vphantom{$   #2 $   #3}\hfill\arabic{KMlineNumber}.}\vskip\fboxsep}
+\g@addto@macro\KMboxII{\hbox{\vphantom{$   #2 $   #3}~$  #2$  ~}\vskip\fboxsep}
+\g@addto@macro\KMboxIII{\hbox to \wd\KMtempboxB{\vphantom{$   #2 $   #3}\hfill #3}\vskip\fboxsep}
+}
+\renewcommand{\KMprove}[3][]
+{
+\g@addto@macro\KMboxI{\refstepcounter{KMlineNumber}\if#1\empty\relax\else\label{#1}\fi
+\hbox to \wd\KMtempboxA{\vphantom{\KMProveword  $   #2$   #3}\hfill\arabic{KMlineNumber}.}\vskip 2\fboxsep\vbox\bgroup\vskip\fboxrule\vskip\fboxsep
+}
+\g@addto@macro\KMboxII{
+\hbox{~\vphantom{\KMProveword $   #2 $   #3}~\KMProveword~  $   #2 $  ~ }\vskip 2\fboxsep\hbox\bgroup\vbox{\hbox{~}\vskip\fboxsep\vskip\fboxrule}
+\vrule width\fboxrule\vbox\bgroup\hrule height\fboxrule\vskip\fboxsep
+}
+\g@addto@macro\KMboxIII{
+\hbox to \wd\KMtempboxB{\vphantom{\KMProveword $   #2 $   #3}\hfill #3}\vskip 2\fboxsep\vbox\bgroup\vskip\fboxrule\vskip\fboxsep
+}
+}
+\makeatother
+
+%KM-Kalkül, geordnetes paar und gather-Umgebung für Formeln:
+\newcommand{\UB}{$\und$B}
+\newcommand{\UE}{$\und$E}
+\newcommand{\OrE}{$\oder$E}
+\newcommand{\OrB}{$\oder$B}
+\newcommand{\EB}{$\ex$B}
+\newcommand{\EE}{$\ex$E}
+\newcommand{\paar}[1]{\left \langle #1 \right \rangle}
+\newcommand{\gth}[2]{\begin{gather*} #1 \label{#2} \end{gather*}}
+\newcommand{\gthd}[2]{\begin{gather} \begin{gathered}#1 \label{#2}\end{gathered}\end{gather}}
+
+%objektsprachliche Symbole:
+\newcommand{\und}{\wedge}
+\newcommand{\oder}{\vee}
+\newcommand{\then}{\rightarrow}
+\newcommand{\eq}{\leftrightarrow}
+\newcommand{\uu}{\cup}
+\newcommand{\C}{\cap}
+\newcommand{\TM}{\subseteq}
+\newcommand{\all}{\forall}
+\newcommand{\ex}{\exists}
+% \neg gibt es schon
+
+%Zahlbereichsymbole, Potenzmenge und Sprachnamen
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Pp}{\mathcal{P}}
+\newcommand{\Ll}{\ensuremath{\mathcal{L}}}
+\newcommand{\pair}[1]{\langle #1 \rangle}
+\newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+\newcommand{\mq}[1]{\mlq #1 \mrq} % steht für "math quotes"
+\newcommand{\sse}{\subseteq}
+\newcommand{\gesch}{\cap} % steht für "geschnitten"
+\newcommand{\verin}{\cup} % Habe hier mit Absicht einen Buchstaben weggelassen, ähnlich wie \infty
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\LPL}{\ensuremath{\mathcal{L}_{PL}}}
+\newcommand{\LAL}{{\ensuremath{\mathcal{L}_{AL}}}} % zusätzliche „{}“, um es in Subskripts nutzen zu können
+\newcommand{\FmLAL}{\ensuremath{\mathcal{F}m_\LAL}} % zur besseren Lesbarkeit der AL-Definitionen
+\newcommand{\SKLAL}{\ensuremath{\mathcal{SK}_\LAL}} % zur besseren Lesbarkeit der AL-Definitionen
+\newcommand{\MIb}{{\pair{M, I}, \beta}} % zur Benutzung im Math-Mode
+
+
+%metasprachliche Symbole:
+\newcommand{\Land}{
+    \raisebox{-0.12em}{ \begin{turn}{90} $\eqslantgtr$ \end{turn} }
+}
+\newcommand{\Lor}{
+     \raisebox{-0.12em}{ \begin{turn}{90} $\eqslantless$ \end{turn} }
+}
+\newcommand{\Then}{
+    \Rightarrow
+}
+\newcommand{\Gdw}{
+    \Leftrightarrow
+}
+\newcommand{\Neg}{
+    \neg\hspace*{-0.5em}\neg
+}
+\newcommand{\Forall}{
+    \raisebox{0.18em}{\scriptsize{\textbackslash}}\hspace*{-0.175em}\forall
+}
+\newcommand{\Exists}{
+    \exists\hspace*{-0.45em}\exists
+}
+
+\newcommand{\nehT}{\Leftarrow}
+
+\DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
+\DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
+\newcommand{\concat}{\raisebox{0.45em}{\scalebox{0.7}{$\smallfrown$}}}
+
+%models gibt es schon
+%\
+
+\newcommand{\deduces}{\vdash}
+\newcommand{\sidew}[1]{\begin{sideways} #1 \end{sideways}}
+%Anführungszeichen
+
+\newcommand{\qleft}{\ulcorner}
+\newcommand{\qright}{\urcorner}
+\newcommand{\qc}[1]{\qleft #1 \qright}
+\newcommand{\anf}[1]{`#1'}
+\newcommand{\manf}[1]{\text{`}#1\text{}}
+\newcommand{\tmanf}[1]{\text{`#1'}}
+%\renewcommand{\models}{\vDash}
+\newcommand{\Anf}[1]{„#1“}
+\newcommand{\cn}{\/^{\smallfrown}}
+%Kopf
+
+\newcommand{\varsheet}{}
+\newcommand{\sheet}[1]{ %Nummer des Aufgabenblatts
+    \renewcommand{\varsheet}{\mbox{\textbf{Aufgabenblatt #1}}}
+}
+
+\newcommand{\varhandin}{}
+\newcommand{\handin}[1]{ %Abgabedatum
+    \renewcommand{\varhandin}{\mbox{\textbf{Abgabedatum: #1}}}
+}
+
+
+\newcommand{\varcourse}{}
+\newcommand{\course}[1]{ %Kursname
+    \renewcommand{\varcourse}{\mbox{\scshape{#1}}}
+}
+
+\newcommand{\header}{
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \varcourse\\
+        \\
+        \makebox[\textwidth][s]{\varsheet \phantom{ } \varhandin}\\
+        \hline
+        %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+    \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+}
+
+\newcommand{\varDatum}{}
+\newcommand{\Datum}[1]{ %Klausurdatum
+    \renewcommand{\varDatum}{\mbox{\textbf{#1}}}
+}
+
+\newcommand{\semesterheader}{
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \varcourse\\
+        \\
+        \makebox[\textwidth][s]{\mbox{\textbf{Semesteraufgabe}} \phantom{ } \varhandin}\\
+        \hline
+        %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+    \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+}
+\newcommand{\semesterheaderl}{
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \varcourse\\
+        \\
+        \makebox[\textwidth][s]{\mbox{\textbf{Semesteraufgabe: Lösung}} \phantom{ } \varhandin}\\
+        \hline
+        %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+    \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+}
+
+%Klausurheader ohne Gruppe:
+\newcommand{\Nachklausurheader}{
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \varcourse\\
+        \\
+        \makebox[\textwidth][s]{\mbox{\textbf{Nachklausur}} \phantom{ } \varDatum}\\
+        \hline
+        %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+    \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+}
+
+%Klausurheader ohne Gruppe:
+\newcommand{\Klausurheader}{
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \varcourse\\
+        \\
+        \makebox[\textwidth][s]{\mbox{\textbf{Klausur}} \phantom{ } \varDatum}\\
+        \hline
+        %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+    \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+}
+\newcommand{\Wahlpflicht}{
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \\
+        \makebox[\textwidth][s]{\mbox{\textbf{Wahlpflichtbereich}} \phantom{ }}\\
+	\hline
+        %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+    \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+}
+
+% % %mit Gruppe:
+% \newcommand{\Klausurheader}[1]{
+%   \begin{tabular}{@{}p{\textwidth}@{}}
+%       \varcourse\hfill \framebox{\scshape{Gruppe #1}}\\
+%       \\
+%       \makebox[\textwidth][s]{\mbox{\textbf{Klausur}} \phantom{ } \varDatum}\\
+%       \hline
+%       %\varsheet \vspace{\stretch{1}} \varcourse \vspace{\stretch{1}} \varhandin\\
+%   \end{tabular}\vspace{1.5em plus 0.1em minus 0.1em}
+% }
+
+%Q-Analyse
+\newcommand{\qsep}[1]{\end{array}&\vline&\begin{array}[t]{c}} %der Parameter macht nicht, schafft aber Übersicht im eigentlichen Dokument
+
+\newenvironment{qtab}[1]
+    {
+        \begin{array}[t]{c@{}c@{}c}
+            &&\\
+            &\scriptsize\fbox{$#1$}&\\
+            \begin{array}[t]{c}
+    }
+    {       \end{array}
+        \end{array}
+    }
+
+%Aufgaben
+
+\newcounter{tasks}
+
+ \newenvironment{task}[1]{
+    \vspace{0.5em plus 0.3em minus 0.3em}
+    \addtocounter{tasks}{1}
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \textbf{Aufgabe \arabic{tasks}} (#1)            \\
+        %\hline
+    \end{tabular}\vspace{0.5em plus 0.1em minus 0.1em}
+
+ }
+ {\vspace{1.5em plus 0.3em minus 0.3em}}
+
+\newenvironment{Klausurtask}[2]{
+    \vspace{0.5em plus 0.3em minus 0.3em}
+    \addtocounter{tasks}{1}
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \textbf{Aufgabe \arabic{tasks}} (#1)\hfill (#2 P)\\
+        %\hline
+    \end{tabular}\vspace{0.5em plus 0.1em minus 0.1em}
+
+}
+{\vspace{1.5em plus 0.3em minus 0.3em}}
+
+
+\newenvironment{ltask}[3]{
+    \vspace{0.5em plus 0.3em minus 0.3em}
+    \addtocounter{tasks}{#1}
+    \begin{tabular}{@{}p{\textwidth}@{}}
+        \textbf{Aufgabe \arabic{tasks}} (#2)\hfill (#3 P)\\
+        %\hline
+    \end{tabular}\vspace{0.5em plus 0.1em minus 0.1em}
+
+}
+{\vspace{1.5em plus 0.3em minus 0.3em}}
+
+
+
+
+
+
+
+%Counterausgabe:
+\newcommand\enumroman[1]{{(\textit{\roman{#1}})}}
+\newcommand\enumalph[1]{{\alph{#1})}}
+\newcommand\enumgrec[1]{{\engrec{#1})}}
+
+\newcommand{\enumsubtask}{
+    \ifthenelse{\value{subtaskdepth}=1}
+        {\enumalph{subtaski}}
+        {
+            \ifthenelse{\value{subtaskdepth}=2}
+                {\enumroman{subtaskii}}
+
+                    \ifthenelse{\value{subtaskdepth}=3}
+                    {\enumgrec{subtaskiii}}
+
+                }
+}
+
+\newcommand{\usesubtaskcounter}{
+    \ifthenelse{\value{subtaskdepth}=1}
+        {\usecounter{subtaski}}
+        {
+            \ifthenelse{\value{subtaskdepth}=2}
+                {\usecounter{subtaskii}}
+                {\usecounter{subtaskiii}}
+        }
+}
+
+
+
+%Listen:
+
+\newcounter{subtaski}
+\newcounter{subtaskii}
+\newcounter{subtaskiii}
+\newcounter{subtaskdepth}
+
+\newcommand{\setsubtaskmargin}{
+    \ifthenelse{\value{subtaskdepth}=1}{
+        \setlength{\labelwidth}{2em}
+        \setlength{\leftmargin}{2em}
+    }
+    {
+        \ifthenelse{\value{subtaskdepth}=2}{
+            \setlength{\labelwidth}{3.5em}
+            \setlength{\leftmargin}{3.5em}
+
+        }{
+            \setlength{\labelwidth}{1em}
+            \setlength{\leftmargin}{1em}
+        }
+    }
+}
+
+\newenvironment{subtasks}
+   {    \addtocounter{subtaskdepth}{1}
+    \begin{list}{\enumsubtask}{\usesubtaskcounter
+                      \setlength{\topsep}{0.5ex plus0.1ex minus0.1ex}
+                      \setlength{\itemsep}{0.1ex plus0.1ex minus0.1ex}
+                      \setlength{\parsep}{0.1ex plus0.1ex minus0.1ex}
+                      \setlength{\labelsep}{0em}
+                      \setsubtaskmargin}}
+   {    \end{list}
+    \addtocounter{subtaskdepth}{-1}}
+
+
+
+

@@ -1,0 +1,286 @@
+\documentclass[a4paper]{article}
+\input{hu_logikstuff4-changed}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{bussproofs}
+\usepackage[export]{adjustbox}
+%\pagestyle{headings}
+\usepackage{amssymb} % fuer logik
+
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{
+    \vspace{-30pt}
+	\includegraphics*[width=0.1\textwidth,left]{ErstesSem/images/hu_logo2.png}\\
+	\vspace{-10pt}
+	Einf"uhrung in die Logik -- Aufgabenblatt 3}
+\author{Lennard Wolf\\
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
+\maketitle
+\vspace{-4pt}
+
+\section*{Aufgabe 1}
+\large
+
+\textbf{a) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $(A \Land \Neg B) \Then \Neg (A \Then B)$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em} $A \Land \Neg B$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em} $\Neg (A \Then B)$
+
+\vspace{2pt}
+Angenommen (zur \emph{reductio ad absurdum} $\Neg$($\dagger$)): 
+
+\vspace{2pt}
+(2) \hspace*{1em} $A \Then B$
+\vspace{2pt}
+
+Wir wissen aus (1): 
+
+\vspace{2pt}
+(3) \hspace*{1em} $A$
+
+\vspace{2pt}
+Aus (2) und (3) per \emph{modus ponens}: 
+
+\vspace{2pt}
+(4) \hspace*{1em} $B$
+
+\vspace{10pt}
+(1) $\lightning$ (4). 
+
+Durch die \emph{reductio} ist gezeigt, dass $\Neg \Neg (\dagger$), also  ($\dagger$), aus (1) folgt. Damit ist ($\circ$) gezeigt.
+\vspace{14pt}
+
+
+
+\noindent \textbf{b) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $(A \Lor B) \Then (A \Then \Neg B)$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em} $A \Lor B$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em} $A \Then \Neg B$
+
+\vspace{2pt}
+Oder-Beseitigung aus (1): 
+
+\vspace{2pt}
+(2) \hspace*{1em} $A$
+
+\vspace{2pt}
+Aus ($\dagger$) und (2) per \emph{modus ponens}: 
+
+\vspace{2pt}
+(3) \hspace*{1em} $\Neg B$
+
+\vspace{2pt}
+Oder-Beseitigung aus (1): 
+
+\vspace{2pt}
+(4) \hspace*{1em} $B$
+
+\vspace{10pt}
+(3) $\lightning$ (4). 
+
+Durch den Widerspruch ist gezeigt, dass ($\dagger$) nicht aus (1) folgen kann. Damit ist gezeigt, dass ($\circ$) logisch falsch ist.
+
+Beispiels"atze: "`Ich bin ein Mensch"' $\Lor$ "`Ich bin ein Tier"' $\Then$ "`Ich bin ein Mensch und ich bin nicht ein Tier"'. 
+
+
+\vspace{14pt}
+
+\noindent \textbf{c) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $A \Lor (B \Then A)$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em} $A$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em} $B \Then A$
+
+\vspace{2pt}
+Angenommen (zur \emph{reductio ad absurdum} die Kontraposition $\Neg$($\dagger$)): 
+
+\vspace{2pt}
+(2) \hspace*{1em} $\Neg B \Then \Neg A$
+
+\vspace{2pt}
+Angenommen: 
+
+\vspace{2pt}
+(3) \hspace*{1em} $\Neg B$
+
+\vspace{2pt}
+Aus (2) und (3): 
+
+\vspace{2pt}
+(4) \hspace*{1em} $\Neg A$
+
+\vspace{10pt}
+(1) $\lightning$ (4). 
+
+Es wurde gezeigt, dass $\Neg (\dagger$) nicht mit (1) "`verodert"' werden kann. Durch die \emph{reductio} ist ($\circ$) gezeigt.
+
+\vspace{14pt}
+
+\noindent \textbf{d) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $\Neg (A \Lor B) \Then (\Neg A \Land \Neg B)$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em} $\Neg (A \Lor B)$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em} $\Neg A \Land \Neg B$
+
+\vspace{2pt}
+Oder-Beseitigung aus (1): 
+
+\vspace{2pt}
+(2) \hspace*{1em} $\Neg A$
+
+\vspace{2pt}
+Oder-Beseitigung aus (1): 
+
+\vspace{2pt}
+(3) \hspace*{1em} $\Neg B$
+
+\vspace{2pt}
+Und-Einf"uhrung aus (2) und (3): 
+
+\vspace{2pt}
+(4) \hspace*{1em} $\Neg A \Land \Neg B$
+
+\vspace{10pt}
+($\dagger$) $\Gdw$ (4). 
+
+($\dagger$) folgt also logisch aus (1), womit ($\circ$) gezeigt w"are.
+
+\newpage
+\noindent \textbf{e) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $(A \Land \Neg A) \Then B$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em} $A \Land \Neg A$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em} $B$
+
+\vspace{2pt}
+Und-Beseitigung aus ($1$):
+
+\vspace{2pt}
+(2) \hspace*{1em} $A$
+
+\vspace{2pt}
+Und-Beseitigung aus ($1$):
+
+\vspace{2pt}
+(3) \hspace*{1em} $\Neg A$
+
+\vspace{2pt}
+Oder-Einf"uhrung aus (2):
+
+\vspace{2pt}
+(4) \hspace*{1em} $A \Lor B$
+
+\vspace{2pt}
+\emph{Modus tollens} aus (3) und (4): 
+
+\vspace{2pt}
+(5) \hspace*{1em} $B$
+
+\vspace{10pt}
+($\dagger$) $\Gdw$ (5). 
+
+($\dagger$) folgt also logisch aus (1), womit ($\circ$) gezeigt w"are.
+
+
+
+\section*{Aufgabe 2}
+
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries g)}]
+  \item[a)] $\Forall x (x$ ist sch"on)
+  \item[b)] $\Exists x (x$ ist ein Drache $\Land~x$ kann fliegen)
+  \item[c)] $\Forall x (x$ ist ein Drache $\Then x$ lebt nicht vegetarisch)
+  \item[d)] $\Exists x (x$ ist ein Stern $\Land~x$ ist nicht hell)
+  \item[e)] $\Forall x (x$ ist eine nat"urliche Zahl $\Then  (x$ ist gerade $\Lor  x$ ist ungerade))
+  \item[f)] $x$ ist eine Stadt $\Gdw x$ hat mehr als 1999 Einwohner*innen
+  \item[g)] ($\Neg \Exists x (x$ ist ein Einhorn)) $\Then$ $\Forall y (y$ ist ein*e Naturforscher*in $\Then y$ irrt sich nicht)
+\end{description}
+
+\end{document}

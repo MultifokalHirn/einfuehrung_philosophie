@@ -1,0 +1,97 @@
+
+\usepackage{rotating}
+\usepackage{qtree}
+%\usepackage{KMcalc} %Lennard
+
+
+
+%KM-Kalkül, geordnetes paar und gather-Umgebung für Formeln:
+\newcommand{\UB}{$\und$B}
+\newcommand{\UE}{$\und$E}
+\newcommand{\OrE}{$\oder$E}
+\newcommand{\OrB}{$\oder$B}
+\newcommand{\EB}{$\ex$B}
+\newcommand{\EE}{$\ex$E}
+\newcommand{\paar}[1]{\left \langle #1 \right \rangle}
+\newcommand{\gth}[2]{\begin{gather*} #1 \label{#2} \end{gather*}}
+\newcommand{\gthd}[2]{\begin{gather} \begin{gathered}#1 \label{#2}\end{gathered}\end{gather}}
+
+%objektsprachliche Symbole:
+\newcommand{\und}{\wedge}
+\newcommand{\oder}{\vee}
+\newcommand{\then}{\rightarrow}
+\newcommand{\eq}{\leftrightarrow}
+\newcommand{\uu}{\cup}
+\newcommand{\C}{\cap}
+\newcommand{\TM}{\subseteq}
+\newcommand{\all}{\forall}
+\newcommand{\ex}{\exists}
+% \neg gibt es schon
+
+%Zahlbereichsymbole, Potenzmenge und Sprachnamen
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Pp}{\mathcal{P}}
+\newcommand{\Ll}{\ensuremath{\mathcal{L}}}
+\newcommand{\pair}[1]{\langle #1 \rangle}
+\newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+\newcommand{\mq}[1]{\mlq #1 \mrq} % steht für "math quotes"
+\newcommand{\sse}{\subseteq}
+\newcommand{\gesch}{\cap} % steht für "geschnitten"
+\newcommand{\verin}{\cup} % Habe hier mit Absicht einen Buchstaben weggelassen, ähnlich wie \infty
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\LPL}{\ensuremath{\mathcal{L}_{PL}}}
+\newcommand{\LAL}{{\ensuremath{\mathcal{L}_{AL}}}} % zusätzliche „{}“, um es in Subskripts nutzen zu können
+\newcommand{\FmLAL}{\ensuremath{\mathcal{F}m_\LAL}} % zur besseren Lesbarkeit der AL-Definitionen
+\newcommand{\SKLAL}{\ensuremath{\mathcal{SK}_\LAL}} % zur besseren Lesbarkeit der AL-Definitionen
+\newcommand{\MIb}{{\pair{M, I}, \beta}} % zur Benutzung im Math-Mode
+
+
+%metasprachliche Symbole:
+\newcommand{\Land}{
+    \raisebox{-0.12em}{ \begin{turn}{90} $\eqslantgtr$ \end{turn} }
+}
+\newcommand{\Lor}{
+     \raisebox{-0.12em}{ \begin{turn}{90} $\eqslantless$ \end{turn} }
+}
+\newcommand{\Then}{
+    \Rightarrow
+}
+\newcommand{\Gdw}{
+    \Leftrightarrow
+}
+\newcommand{\Neg}{
+    \neg\hspace*{-0.5em}\neg
+}
+\newcommand{\Forall}{
+    \raisebox{0.18em}{\scriptsize{\textbackslash}}\hspace*{-0.175em}\forall
+}
+\newcommand{\Exists}{
+    \exists\hspace*{-0.45em}\exists
+}
+
+\newcommand{\nehT}{\Leftarrow}
+
+\DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
+\DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
+\newcommand{\concat}{\raisebox{0.45em}{\scalebox{0.7}{$\smallfrown$}}}
+
+%models gibt es schon
+%\
+
+\newcommand{\deduces}{\vdash}
+\newcommand{\sidew}[1]{\begin{sideways} #1 \end{sideways}}
+%Anführungszeichen
+
+\newcommand{\qleft}{\ulcorner}
+\newcommand{\qright}{\urcorner}
+\newcommand{\qc}[1]{\qleft #1 \qright}
+\newcommand{\anf}[1]{`#1'}
+\newcommand{\manf}[1]{\text{`}#1\text{}}
+\newcommand{\tmanf}[1]{\text{`#1'}}
+%\renewcommand{\models}{\vDash}
+\newcommand{\Anf}[1]{„#1“}
+\newcommand{\cn}{\/^{\smallfrown}}
+%Kopf
+
