@@ -1,0 +1,86 @@
+\documentclass[emulatestandardclasses]{scrartcl}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage{titlesec}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}\PackageWarning{TODO:}{#1!}}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{
+	\includegraphics*[width=0.75\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\vspace{24pt}
+	Kausalit"at und kausales Schliessen}
+\subtitle{Proseminar SS 17\\
+          Dr. Elisabeth Rinner\\
+          Philosophisches Institut I \\ 
+          Humboldt Universit"at zu Berlin}
+\author{Lennard Wolf\\
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
+\maketitle
+\begin{abstract}
+
+Das Proseminar ist eine Einführung in das Thema der Kausalit"at. Es vermittelt einen gebündelten "Uberblick über die verschiedenen theoretischen Ansätze zur formalen Modellierung der Kausalrelation und macht mit den Techniken des kausalen Schließens bekannt.
+
+\end{abstract}
+\newpage
+
+\tableofcontents
+\listoffigures
+\newpage
+
+
+\section{Kausale Relevanz und Kausalgraphen
+\\(15.05.17)}
+
+\subsection{Kausale Relevanz}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Dialektischer Materialismus}]
+  \item[Kausale Relevanz] Ein Faktor $A$ ist f"ur das Auftreten einer Wirkung $B$ kausal relevant, dann und nur dann, wenn es mindestens einen kausalen Prozess gibt, in dessen Verlauf ein Ereignis vom Typ $A$ das Auftreten eines Ereignisses vom Typ $B$ (mit)verursacht. Ein Faktor $A$ ist f"ur das Auftreten einer Wirkung B auch dann kausal relevant, wenn $B$ im Verlauf einzelner Prozesse durch andere kausal relevante Faktoren wie $C$ oder $D$ herbeigeführt wird. Ein Faktor ist genau dann kausal relevant, wenn er direkt oder indirekt kausal relevant ist. Kausale Relevanz ist transitiv: Das erste Glied einer Kausalkette ist immer (indirekt) kausal relevant f"ur das letzte Glied der Kette.
+  \item[Negative kausale Relevanz] Ein Faktor $A$ ist f"ur das Auftreten einer Wirkung $B$ negativ kausal relevant, dann und nur dann, wenn $A$ ein hemmender Faktor von $B$ ist. Ein Faktor $A$, der negativ kausal relevant ist f"ur $B$, ist positiv kausal relevant f"ur $\bar{B}$. 
+  \item[Positive kausale Relevanz] Ein Faktor $A$ ist f"ur das Auftreten einer Wirkung $A$ positiv kausal relevant, dann und nur dann, wenn $A$ ein Ursachentyp, jedoch nicht ein hemmender Faktor von $A$ ist. Ein Faktor $A$, der positiv kausal relevant ist f"ur $A$, ist negativ kausal relevant f"ur $A$.
+  \item[Direkte kausale Relevanz] Eine Ursache $A$ ist relativ zur betrachteten Faktorenmenge genau dann direkt kausal relevant f"ur eine Wirkung B, wenn ihre kausale Relevanz auf mindestens einem Kausalpfad nicht durch einen weiteren Faktor vermittelt wird.
+  \item[Indirekte kausale Relevanz] Eine Ursache $A$ ist relativ zur betrachteten Faktorenmenge genau dann indirekt kausal relevant f"ur eine Wirkung $A$, wenn es mindestens einen dritten Ereignistyp $C$ gibt, der zugleich Wirkung von $A$ und Ursache von $A$ ist. Ob es sich bei einem Ereignis um eine direkte oder indirekte Ursache bzw. bei einem Faktor um einen direkten oder indirekten Ursachentyp handelt, ist abhängig vom Spezifikationsniveau der jeweiligen Kausalanalyse. Positive und negative kausale Relevanz heben sich nicht gegenseitig auf. Eine Ursache kann positiv und negativ relevant zugleich sein.
+  \item[Kausalgraph] Ein Kausalgraph ist ein Digraph, dessen Knoten f"ur Ereignistypen und dessen Pfade f"ur die Relation direkter kausaler Relevanz stehen. Anfangsknoten von Pfaden stehen f"ur Ursachen, Endknoten f"ur Wirkungen.
+  \item[Wurzelfaktor] Ein Wurzelfaktor ist ein Faktor, der in einer gegebenen kausalen Struktur nur als Ursache, nicht aber als Wirkung auftritt. In Kausalgraphen werden Wurzelfaktoren durch Knoten wiedergegeben, die zwar Anfangs-, nicht aber Endknoten eines Pfades sind.
+\end{description}
+
+\subsection{Kausalprinzipien}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Dialektischer Materialismus}]
+  \item[Determinismusprinzip] Bei gleichen Ursachentypen werden die gleichen Wirkungstypen instantiiert. Auf eine griffige Kurzformel gebracht: Gleiche Ursachen, gleiche Wirkungen
+  \item[Kausalit"atsprinzip] Ist keine Ursache instantiiert, tritt auch keine Wirkung auf. Auf eine griffige Kurzformel gebracht: Jedes Ereignis hat eine Ursache.
+  \item[Prinzip der Relevanz] Ein kausal relevanter Faktor ist mindestens in einer Situation unverzichtbar f"ur das Entstehen einer Wirkung.
+  \item[Prinzip der persistenten Relevanz] Ein kausal relevanter Faktor beh"alt seine Relevanz, wenn zusätzliche Faktoren in die Betrachtung der kausalen Verhältnisse einbezogen werden.
+\end{description}
+
+\section{Adorno: "`Gesellschaft"'
+\\(10.05.17)}
+
+\
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{images/template.png}
+%	\caption{Template Bild}
+%	\label{fig:template}
+%\end{figure}
+
+\end{document}

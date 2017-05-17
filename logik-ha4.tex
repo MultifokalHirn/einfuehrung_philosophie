@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{scrartcl}
+
+\usepackage[fleqn, leqno]{amsmath}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{images/KMcalc}
+\usepackage{mathtools} % Für \substack für mehrzeilige Subskripte
+
+\input{hu_logikstuff4}
+
+\newcommand{\Ex}{\Exists}
+\newcommand{\All}{\Forall}
+\newcommand{\Und}{\Land}
+\newcommand{\Oder}{\Lor}
+\newcommand{\Eq}{\Gdw}
+
+%ohne Seitenzahl:
+\pagestyle{empty}
+\begin{document}
+\handin{24.05.2017, 12 Uhr} \sheet{4}
+\course{VL Einführung in die Logik [SO 2014] SoSe 2017}
+\header
+
+\begin{task}{Explizitfassung normalsprachlicher Sätze}
+Geben Sie mithilfe von Quantor- und Junktor-Symbolen schematische Darstellungen der folgenden normalsprachlichen Sätze an. Gehen Sie dabei wie in der Vorlesung vor und überführen Sie den jeweiligen Satz zunächst in einen anderen normalsprachlichen Satz, der die uns bekannten Junktoren und Quantoren im Wortlaut enthält. Setzen Sie dann in einem zweiten Schritt Variablen ein und erstellen Sie auf dieser Basis dann letztlich Ihre schematisierte Darstellung des Ausgangssatzes.
+\\ Wählen Sie beispielweise für den Satz \glqq Alle Logiker*innen sind toll.{\grqq} zunächst die Schreibweise \glqq Für jedes Objekt gilt: Wenn $\underline{\textrm{es}}$ ein*e Logiker*in ist, dann ist $\underline{\textrm{es}}$ toll.{\grqq}. (Anmerkung: Unterstreichungen können Ihnen helfen, kenntlich zu machen, welche Pronomina sich worauf genau beziehen.) \\
+Dann setzen Sie in diesen Satz Variablen ein: \glqq Für jedes Objekt $x$ gilt: Wenn $x$ ein*e Logiker*in ist, dann ist $x$ toll.{\grqq}, und schließlich erhalten Sie daraus den Satz: \\
+\glqq $\Forall x \ ( \varphi{(x)} \Then \psi(x)) ${\grqq}
+\\
+\begin{subtasks}
+    \item Jede Zahl ist mit sich selbst identisch.
+    \item Alle geraden und alle natürlichen Zahlen sind natürliche Zahlen.
+    \item Es gibt Zahlen, die nicht gerade sind.
+\end{subtasks}
+\end{task}
+
+\begin{task}{Normalsprachliche Varianten von Explizitfassungen}
+Geben Sie für folgende schematisierte Sätze jeweils ein normalsprachliches Pendant an, indem Sie sich normalsprachliche Einsetzungen für $\varphi$ und $\psi$ überlegen. \\
+Beispielsweise würde der Satz \glqq $\Ex x \ \varphi(x)${\grqq} überführt werden können in \glqq $\Ex x$ $x$ ist ein*e Student*in{\grqq} und das wiederum in \glqq Es gibt ein*e Student*in.{\grqq}
+\\
+\begin{subtasks}
+    \item $\Ex x \ \big( \varphi(x) \Lor \psi(x)\big)$
+    \item $\Forall x \ \big(\varphi(x) \Land  \psi(x) \Then \psi(x)\big)$
+    \item $\Forall x \ \big(\varphi(x) \Then \Ex y \ \big( \varphi(y) \Land \Neg \ y = x\big)\big)$
+\end{subtasks}
+\end{task}
+
+\begin{task}{Strenges Argumentieren mit Quantoren und Identität}
+Zeigen Sie folgende Aussagen mit einem strengen Argument:
+\\
+\begin{subtasks}
+    \item $\Ex x \ (x \textrm{ ist rot} \Land x\textrm{ ist blau} ) \Then (\Ex x \ x \textrm{ ist rot}  \Land \Ex x \ x \textrm{ ist blau} )$
+    \item $\Forall x \ \big(\varphi(x) \Then \psi(x)\big) \Then \big(\Ex x \ \varphi(x) \Then \Ex x \ \psi(x)\big)$
+    \item $\Forall x \ \big( \Neg \ x = x \Then x \textrm{ ist ein Drache}\big)$
+    \item $\Forall x \ (a=x \Then Px) \Then Pa$
+    
+\end{subtasks}
+\end{task}
+
+
+\end{document}

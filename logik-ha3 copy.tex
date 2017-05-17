@@ -1,0 +1,339 @@
+\documentclass[a4paper]{article}
+\input{hu_logikstuff4-changed}
+\newcommand{\Ex}{\Exists}
+\newcommand{\All}{\Forall}
+\newcommand{\Und}{\Land}
+\newcommand{\Oder}{\Lor}
+\newcommand{\Eq}{\Gdw}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{bussproofs}
+\usepackage[export]{adjustbox}
+%\pagestyle{headings}
+\usepackage{amssymb} % fuer logik
+
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{
+    \vspace{-30pt}
+	\includegraphics*[width=0.1\textwidth,right]{ErstesSem/images/hu_logo2.png}\\
+	\vspace{-10pt}
+	Einf"uhrung in die Logik -- Aufgabenblatt 4}
+\author{Lennard Wolf\\
+        \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}
+\maketitle
+\vspace{-4pt}
+
+\section*{Aufgabe 1}
+\large
+
+\textbf{a) }
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (4))}]
+  \item[(1)] Jede Zahl ist mit sich selbst identisch.
+  \item[(2)] F"ur jedes Objekt gilt: Wenn $\underline{\textrm{es}}$ eine Zahl ist, dann ist $\underline{\textrm{es}}$ mit sich selbst identisch.
+  \item[(3)] F"ur jedes Objekt $x$ gilt: Wenn $x$ eine Zahl ist, dann ist $x$ identisch mit $x$.
+  \item[(4)] $\Forall x \ \big(\varphi(x) \Then x = x \big)$
+\end{description}
+\vspace{10pt}
+
+\noindent \textbf{b) }
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (4))}]
+  \item[(1)] Alle geraden und alle nat"urlichen Zahlen sind nat"urliche Zahlen.
+  \item[(2)] F"ur jedes Objekt gilt: Wenn $\underline{\textrm{es}}$ eine gerade Zahl ist, dann ist $\underline{\textrm{es}}$ eine nat"urliche Zahl und wenn $\underline{\textrm{es}}$ eine nat"urliche Zahl ist, dann ist $\underline{\textrm{es}}$ eine nat"urliche Zahl. 
+  \item[(3)] F"ur jedes Objekt $x$ gilt: Wenn $x$ eine gerade Zahl ist, dann ist $x$ eine nat"urliche Zahl und wenn $x$ eine nat"urliche Zahl ist, dann ist $x$ eine nat"urliche Zahl.
+  \item[(4)] $\Forall x \ \big((\varphi(x) \Then \psi(x)) \Land (\psi(x) \Then \psi(x)) \big)$
+\end{description}
+\vspace{10pt}
+
+\noindent \textbf{c) }
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (4))}]
+  \item[(1)] Es gibt Zahlen\footnote{Das steht hier im Plural, aber ich gehe davon aus, dass  das einfach im Sinne des Existenzquantors gemeint ist. Alternativ w"are folgendes m"oglich: $\Forall x \ ( \Neg ( x$ ist eine Zahl $ \Then \Neg (x$ ist ungerade$)))$, jedoch w"are dies nicht \emph{direkt} der Form des Satzes zu entnehmen.}, die nicht gerade sind.
+  \item[(2)] Es gibt ein Objekt, f"ur das gilt: $\underline{\textrm{Es}}$ ist eine Zahl und $\underline{\textrm{es}}$ ist nicht gerade.
+  \item[(3)] Es gibt ein Objekt $x$, f"ur das gilt: $x$ ist eine Zahl und $x$ ist nicht gerade.
+  \item[(4)] $\Ex x \ \big(\varphi(x) \Land  \psi(x) \big)$
+\end{description}
+\vspace{10pt}
+
+\section*{Aufgabe 2}
+
+\textbf{a) }
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (4))}]
+  \item[(1)] $\Ex x \ \big( \varphi(x) \Lor \psi(x)\big)$
+  \item[(2)] $\Ex x \ x$ ist ein lustiger Film oder $x$ ist ein trauriger Film.
+  \item[(3)] Es gibt einen Film der lustig oder traurig ist.
+\end{description}
+\vspace{10pt}
+
+\noindent \textbf{b) }
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (4))}]
+  \item[(1)] $\Forall x \ \big(\varphi(x) \Land  \psi(x) \Then \psi(x)\big)$
+  \item[(2)] $\Forall x$ wenn $x$ ein Mensch und ein Tier ist, dann ist $x$ ein Tier.
+  \item[(3)] Alle, die Menschen und Tiere sind, sind Tiere.
+\end{description}
+\vspace{10pt}
+
+\noindent \textbf{c) }
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries (4))}]
+  \item[(1)] $\Forall x \ \big(\varphi(x) \Then \Ex y \ \big( \varphi(y) \Land \Neg \ y = x\big)\big)$
+  \item[(2)] $\Forall x$ wenn $x$ ein Mensch ist, dann $\Ex y \ y$ ist ein Mensch, und $x$ und $y$ sind verschieden.
+  \item[(3)] F"ur jeden Menschen gibt es einen anderen Menschen.
+\end{description}
+\vspace{10pt}
+
+
+\section*{Aufgabe 3}
+
+
+\textbf{a) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $\Ex x \ (x \textrm{ ist rot} \Land x\textrm{ ist blau} ) \Then (\Ex x \ x \textrm{ ist rot}  \Land \Ex x \ x \textrm{ ist blau} )$
+
+\vspace{2pt}
+Angenommen: 
+
+\vspace{2pt}
+(1) \hspace*{1em} $\Ex x \ (x \textrm{ ist rot} \Land x\textrm{ ist blau} )$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em} $\Ex x \ x \textrm{ ist rot}  \Land \Ex x \ x \textrm{ ist blau}$
+
+\vspace{2pt}
+Und-Beseitigung aus (1): 
+
+\vspace{2pt}
+(2) \hspace*{1em}  $\Ex x \ x \textrm{ ist rot}$
+\vspace{2pt}
+
+Und-Beseitigung aus (1):
+
+\vspace{2pt}
+(3) \hspace*{1em}  $\Ex x \ x \textrm{ ist blau}$
+
+\vspace{2pt}
+Und-Einf"uhrung aus (2) und (3):
+
+\vspace{2pt}
+(4) \hspace*{1em} $\Ex x \ x \textrm{ ist rot} \Land \Ex x \ x \textrm{ ist blau}$
+
+\vspace{10pt}
+(4) $\Leftrightarrow$ ($\dagger$). 
+
+Somit ist gezeigt, dass ($\dagger$) aus (1) folgt, womit ($\circ$) bewiesen ist.
+
+\newpage
+
+
+\noindent \textbf{b) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $\Forall x \ \big(\varphi(x) \Then \psi(x)\big) \Then \big(\Ex x \ \varphi(x) \Then \Ex x \ \psi(x)\big)$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em}  $\Forall x \ \big(\varphi(x) \Then \psi(x)\big)$
+
+\vspace{2pt}
+Zu zeigen: 
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em}  $\Ex x \ \varphi(x) \Then \Ex x \ \psi(x)$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(2) \hspace*{1em}  $\Ex x \ \varphi(x)$
+
+\vspace{2pt}
+Zu zeigen:
+
+\vspace{2pt}
+($\ddagger$) \hspace*{1em} $\Ex x \ \psi(x)$
+
+\vspace{2pt}
+Sei $t$ beliebig. Zu zeigen:
+
+\vspace{2pt}
+($\ast$) \hspace*{1em}  $\psi(t)$
+
+\vspace{2pt}
+Aus (1) durch Spezialisierung auf $t$:
+
+\vspace{2pt}
+(3) \hspace*{1em} $\varphi(t) \Then \psi(t)$
+
+\vspace{2pt}
+Aus (2) durch Existenz-Beseitigung auf $t$:
+
+\vspace{2pt}
+(4) \hspace*{1em} $\varphi(t)$
+
+\vspace{2pt}
+Aus (3) und (4) per \emph{modus ponens}:
+
+\vspace{2pt}
+(4) \hspace*{1em} $\psi(t)$
+
+
+\vspace{10pt}
+(4) $\Leftrightarrow$ ($\ast$). 
+
+Da ($\ast$) gezeigt ist, ist auch ($\ddagger$) gezeigt, wodurch ($\dagger$) und damit ($\circ$) gezeigt sind.
+
+\vspace{14pt}
+
+
+\noindent \textbf{c) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $\Forall x \ \big( \Neg \ x = x \Then x \textrm{ ist ein Drache}\big)$
+
+\vspace{2pt}
+Angenommen f"ur die \emph{reductio} von ($\circ$):
+
+\vspace{2pt}
+(1) \hspace*{1em} $\Ex x \ \Neg\big(\Neg \ x = x \Then x \textrm{ ist ein Drache}\big)$
+
+\vspace{2pt}
+Sei $t$ beliebig. Existenz-Beseitigung auf $t$: 
+
+\vspace{2pt}
+(2) \hspace*{1em}  $\Neg\big(\Neg \ t = t \Then t \textrm{ ist ein Drache}\big)$
+\vspace{2pt}
+
+Umformung von (2) basierend auf $(A \Then B) \Leftrightarrow (A \Land \Neg B)$:
+
+\vspace{2pt}
+(3) \hspace*{1em}  $\Neg \ t = t \Land \Neg~t \textrm{ ist ein Drache}$
+
+\vspace{2pt}
+Und-Beseitigung aus (3):
+
+\vspace{2pt}
+(4) \hspace*{1em} $\Neg \ t = t$
+
+\vspace{10pt}
+(4) steht im Widerspruch mit dem Gesetz der Selbstidentit"at. Daher ist (1) logisch falsch und da es die Kontradiktion von ($\circ$) ist, ist ($\circ$) damit bewiesen.
+
+\newpage
+
+
+
+\noindent \textbf{d) }
+\vspace{4pt}
+
+Zu zeigen:
+
+\vspace{2pt}
+($\circ$) \hspace*{1em} $\Forall x \ (a=x \Then Px) \Then Pa$
+
+\vspace{2pt}
+Angenommen:
+
+\vspace{2pt}
+(1) \hspace*{1em} $\Forall x \ (a=x \Then Px)$
+
+\vspace{2pt}
+Zu zeigen:  
+
+\vspace{2pt}
+($\dagger$) \hspace*{1em}  $Pa$
+
+\vspace{2pt}
+Sei $t$ beliebig. Angenommen:
+
+\vspace{2pt}
+(2) \hspace*{1em} $a=t$
+
+\vspace{2pt}
+Aus (1) und (2) per \emph{modus ponens}: 
+
+\vspace{2pt}
+(3) \hspace*{1em}  $Pt$
+\vspace{2pt}
+
+Aus (3) mit der Regel der Substitutivit"at: 
+
+\vspace{2pt}
+(4) \hspace*{1em}  $Pa$
+
+
+\vspace{10pt}
+(4) $\Leftrightarrow$ ($\dagger$). 
+
+Damit ist ($\circ$) gezeigt.
+
+
+
+
+%
+%\noindent \textbf{d) }
+%\vspace{4pt}
+%
+%Zu zeigen:
+%
+%\vspace{2pt}
+%($\circ$) \hspace*{1em} $\Forall x \ (a=x \Then Px) \Then Pa$
+%
+%\vspace{2pt}
+%Angenommen f"ur die \emph{reductio} von ($\circ$):
+%
+%\vspace{2pt}
+%(1) \hspace*{1em} $\Ex x \ \Neg \big( (a=x \Then Px) \Then Pa\big)$
+%
+%\vspace{2pt}
+%Sei $t$ beliebig. Existenz-Beseitigung auf $t$. Zu zeigen:  
+%
+%\vspace{2pt}
+%($\ast$) \hspace*{1em}  $\Neg \big( (a=t \Then Pt) \Then Pa\big)$
+%
+%\vspace{2pt}
+%Angenommen:
+%
+%\vspace{2pt}
+%(1) \hspace*{1em} $\Forall x \ (a=x \Then Px)$
+%
+%\vspace{2pt}
+%Zu zeigen: 
+%
+%\vspace{2pt}
+%($\dagger$) \hspace*{1em}  $Pa$
+%\vspace{2pt}
+%
+
+\end{document}
