@@ -19,7 +19,7 @@
 \pagestyle{empty}
 \begin{document}
 \handin{31.05.2017, 12 Uhr} \sheet{5}
-\course{VL Einführung in die Logik [SO 2014] SoSe 2017}
+\course{Lennard Wolf: Einführung in die Logik, SoSe 2017, Tutorium Benjamin}
 \header
 
 \begin{task}{Strenges Argumentieren mit Quantoren und Identität}
@@ -39,14 +39,24 @@ Angenommen zur \emph{reductio}:
 (1) \hspace*{1em} $\Ex x \, \Neg \ x = x$
 
 \vspace{2pt}
-Gesetz der Selbsidentit"at:
+Existenz-Beseitigung durch Einf"uhrung des f"ur $x$ freien $a$: 
 
 \vspace{2pt}
-(2) \hspace*{1em} $\Forall x \, x = x$
+(2) \hspace*{1em} $\Neg \ a = a$
+
+\vspace{2pt}
+Selbsidentit"at von $a$:
+
+\vspace{2pt}
+(3) \hspace*{1em} $a = a$
 
 \vspace{10pt}
-(1) $\lightning$ (2). Durch die reductio ist ($\circ$) bewiesen.
+(2) $\lightning$ (3). Durch die \emph{reductio} ist ($\circ$) bewiesen.
 \vspace{15pt}
+
+
+%----------------------------------------------------------------------
+
 
 \textbf{b) }
 \vspace{4pt}
@@ -96,6 +106,8 @@ Aus (1) und (2) per Substitutivit"at:
 (3) $\Leftrightarrow$ ($\ast$). Dadurch ist ($\ddagger$) gezeigt, wodurch gezeigt ist, dass ($\dagger$) aus (1) folgt und damit ist ($\circ$) bewiesen.
 \vspace{15pt}
 
+%----------------------------------------------------------------------
+
 \textbf{c) }
 \vspace{4pt}
 
@@ -108,7 +120,7 @@ Zu zeigen:
 Angenommen: 
 
 \vspace{2pt}
-(1) \hspace*{1em} $\big(\Forall x\,  \varphi (x) \Lor \Forall x \, \psi (x) \big)$
+(1) \hspace*{1em} $\Forall x\,  \varphi (x) \Lor \Forall x \, \psi (x)$
 
 \vspace{2pt}
 Zu zeigen:
@@ -119,6 +131,10 @@ Zu zeigen:
 \vspace{10pt}
 (1) $\lightning$ (2). 
 \vspace{15pt}
+
+
+%----------------------------------------------------------------------
+
 
 \textbf{d) }
 \vspace{4pt}
@@ -132,23 +148,30 @@ Zu zeigen:
 Angenommen: 
 
 \vspace{2pt}
-(1) \hspace*{1em} $\varphi(a)$
+(1) \hspace*{1em} $\Neg \Forall x \, \varphi (x)$
 
 \vspace{2pt}
 Zu zeigen:
 
 \vspace{2pt}
-($\dagger$) \hspace*{1em} $\Forall x \, \big(a=x \Then \varphi(x)\big)$
+($\dagger$) \hspace*{1em} $\Ex x \, \Neg \varphi (x)$
 
+\vspace{2pt}
+Allquantor-Beseitigung aus (1), sei $t$ beliebig: 
+
+\vspace{2pt}
+(2) \hspace*{1em} $\Neg \varphi (t)$
+
+\vspace{2pt}
+Existenz-Einf"uhrung aus (2): 
+
+\vspace{2pt}
+(3) \hspace*{1em} $\Ex x \, \Neg \varphi (x)$
 \vspace{10pt}
-(1) $\lightning$ (2). 
-\vspace{15pt}
+
+($\dagger$) $\Leftrightarrow$ (3). Somit ist ($\circ$) bewiesen.
 
 \end{task}
-
-
-
-Durch die \emph{reductio} wurde ($\circ$) gezeigt.
 
 
 \begin{task}{Anführungszeichen, Meta-/Objektsprache}
@@ -157,9 +180,9 @@ Setzen Sie in den folgenden Sätzen dort Anführungszeichen, wo es sinnvoll ist.
 \begin{subtasks}
 	\item $\underline{\mq{p_{7}}}$ ist eine $\mathcal{L}_{AL}$-Formel \Land $\underline{\mq{p_{5}}}$ ist eine $\mathcal{L}_{AL}$-Formel.
 	\item Es gilt, dass $\underline{\mq{\neg}} \concat \underline{\mq{p_{17}}}$ = $\underline{\mq{\neg p_{17}}}$.
-	\item Um auf die Formel $(p_{0} \then p_{1})$ zu referieren, kann man ihren Anführungsnamen $\underline{\mq{(p_{0} \then p_{1})}}$ verwenden.
+	\item Um auf die Formel $(p_{0} \then p_{1})$\footnote{In der Aufgabenstellung steht, dass jenes unterstrichen werden soll, das ein objektsprachliches Gebilde \emph{benennt}, also nicht selber \emph{ist}. Ich gehe daher davon aus, dass hier $(p_{0} \then p_{1})$ nicht gemeint sein kann. Da wie schon gesagt "`benennen"' nicht im Skript vorkommt, bin ich unsicher ob die metasprachlichen Variablen $x$ und $y$ Objektsprachliches "`benennen"', ich sch"atze n"amlich nicht, vielmehr sind sie wahrscheinlich nur Platzhalter f"ur "`Benenner"'.} zu referieren, kann man ihren Anführungsnamen $\underline{\mq{(p_{0} \then p_{1})}}$ verwenden.
 	\item $\Forall x \, \Forall y \, (x$ ist eine $\mathcal{L}_{AL}$-Formel \Land $y$ ist eine $\mathcal{L}_{AL}$-Formel $\Then$ $ \underline{\mq{(}}  \concat x \concat \!\! \underline{\mq{\then}} \!\! \concat y \concat  \underline{\mq{)}} $ ist eine $\mathcal{L}_{AL}$-Formel)\footnote{Die Anf"uhrungszeichen sind hier wegen des Blocksatzes so verschoben.}
-	\item $\Forall x \, (\underline{\mq{\neg}} \concat x = \neg p_{114}  \Then x=p_{114})$\footnote{In der Aufgabenstellung steht, dass jenes unterstrichen werden soll, das ein objektsprachliches Gebilde \emph{benennt}, also nicht selber \emph{ist}. Ich gehe daher davon aus, dass hier z.B. $\neg p_{114}$, oder $(p_{0} \then p_{1})$ in c) nicht gemeint sein kann. Da wie schon gesagt "`benennen"' nicht im Skript vorkommt, bin ich unsicher ob die metasprachlichen Variablen $x$ und $y$ Objektsprachliches "`benennen"', ich sch"atze n"amlich nicht, vielmehr sind sie wahrscheinlich nur Platzhalter f"ur "`Benenner"'.}
+	\item $\Forall x \, (\underline{\mq{\neg}} \concat x = \underline{\mq{\neg p_{114}}}  \Then x=\underline{\mq{p_{114}}})$
 	\item Wir benutzen den einstelligen Junktor $\underline{\mq{\neg}}$, sowie die zweistelligen Junktoren $\underline{\mq{\land}}$, $\underline{\mq{\lor}}$, $\underline{\mq{\then}}$ und $\underline{\mq{\eq}}$.
 \end{subtasks}
 \end{task}
