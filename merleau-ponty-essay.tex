@@ -1,4 +1,5 @@
-\documentclass[a4paper, emulatestandardclasses, 12pt]{scrartcl}
+\documentclass[a4paper, 12pt]{article}
+\usepackage{CJKutf8} % japanese
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{fullpage}
@@ -8,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{calc} 
 \usepackage{enumitem}
+\usepackage[utf8]{inputenc}
 \usepackage{titlesec}
 %\pagestyle{headings}
 \usepackage{setspace} %halbzeilig
@@ -50,16 +52,15 @@
 \begin{document}
 
 \title{\vspace{5ex}
-	\includegraphics*[width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\includegraphics*[bb=0 0 720 200, width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
 	\vspace{30pt}
-	\scshape\LARGE{"`Das Wort selbst ist Tr"ager des Sinnes"'}\\\Large{Zu Merleau-Pontys Verst"andnis von Sprache}}
+	\scshape\LARGE{"`Das Wort selbst ist Tr"ager des Sinnes"'}\\\Large{Zu Merleau-Pontys Verst"andnis von Sprache}\\\vspace{20pt}}
 	
-	\subtitle{\vspace{20pt}Merleau-Ponty: Ph"anomenologie der Wahrnehmung (PS)\\
+
+
+\author{Merleau-Ponty: Ph"anomenologie der Wahrnehmung (PS)\\
 	\vspace{6pt}
-          Dozent: Dr. Matthias Schlo"sberger}
-
-
-\author{\vspace{-4pt}Lennard Wolf\\
+          Dozent: Dr. Matthias Schlo"sberger\\\vspace{4pt}Lennard Wolf\\
         \small{\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}      
 
 \maketitle
@@ -85,13 +86,11 @@
 
 \begin{onehalfspace} 
 
-
-
 \noindent\textbf{$(o)$ Einleitung}
 
-\noindent Klassische Sprachtheorien unterscheiden zwischen den Sprachsymbolen an sich, d.h. den W"ortern, und ihren "`dahinter liegenden"' Bedeutungen. Freges berühmtes Beispiel von Morgenstern und Abendstern\footnote{\cite{sinnundbedeutung}} veranschaulicht dies: So gibt es zum einen die Venus als Ding in der Welt, und zum anderen die Begriffe "`Morgenstern"' und "`Abendstern"', die jeweils Symbole in der Sprache f"ur diesen real existierenden Planeten sind. Da es also zwei verschiedene Begriffe mit der selben Bedeutung\footnote{Es sei angemerkt, dass der \emph{Sinn} f"ur Frege aber jeweils ein anderer ist, n"amlich entsprechend jener Stern, den man zu der bestimmten Tageszeiten sieht.} gibt, l"asst sich die Kontingenz der Begriffswahl erkennen. Das Wort "`Abendstern"' ist nur ein leeres Symbol, das nach einer Interpretation auf ein au"ser ihm liegendes anderes verweist. 
+\noindent Klassische Sprachtheorien unterscheiden zwischen den Sprachsymbolen an sich, also den W"ortern, und ihren "`dahinter liegenden"' Bedeutungen. Freges ber"uhmtes Beispiel von Morgenstern und Abendstern\footnote{\cite{sinnundbedeutung}} veranschaulicht dies: So gibt es zum einen die Venus als Ding in der Welt, und zum anderen die Begriffe "`Morgenstern"' und "`Abendstern"', die jeweils Symbole in der Sprache f"ur diesen real existierenden Planeten sind. Da es also zwei verschiedene Begriffe mit der selben Bedeutung\footnote{Es sei angemerkt, dass der \emph{Sinn} f"ur Frege aber jeweils ein anderer ist, n"amlich entsprechend jener Stern, den man zu der bestimmten Tageszeit sieht.} gibt, l"asst sich eine Kontingenz in der Symbolwahl erkennen. Das Wort "`Abendstern"' ist folglich nur ein leeres Symbol, das erst interpretiert werden muss, da es "`nur"' auf ein au"ser ihm liegendes \emph{anderes} verweist - das lediglich \emph{verweisende} Symbol h"atte genauso gut "`\begin{CJK}{UTF8}{min}一つ星\end{CJK}"'\footnote{"`\begin{CJK}{UTF8}{min}一つ星\end{CJK}"' ist die japanische "Ubersetzung von "`Morgenstern"' und "`Abendstern"'.} sein k"onnen.
 
-Solch ein Verst"andnis von Sprache ist nach der Ansicht von Marcel Merleau-Ponty jedoch unzul"anglich. Ihm zufolge liegt die Bedeutung nicht "`hinter"' den W"ortern, sondern \emph{in} ihnen. In seinem Buch "`Ph"anomenologie der Wahrnehmung"' \citep{merleau1966phanomenologie} beschreibt er unter anderem sein Verst"andnis von Sprache, welches ich in diesem Essay thematisieren m"ochte. Im Speziellen werde ich versuchen, seine eher ungew"ohnlich erscheinende These "`Das Wort selbst ist Tr"ager des Sinnes"' verst"andlich zu machen.\newline
+Solch ein Verst"andnis von Sprache ist nach der Ansicht von Marcel Merleau-Ponty jedoch unzul"anglich. Ihm zufolge liegt die Bedeutung nicht "`hinter"' den W"ortern, sondern \emph{in} ihnen. In seinem Buch "`Ph"anomenologie der Wahrnehmung"' \citep{merleau1966phanomenologie} f"uhrt er unter anderem in sein Verst"andnis von Sprache ein, welches ich in diesem Essay thematisieren m"ochte. Im Besonderen werde ich versuchen, seine eher ungew"ohnlich erscheinende These "`Das Wort selbst ist Tr"ager des Sinnes"' verst"andlich zu machen.\newline
 
 Daf"ur werde ich wie folgt vorgehen. In Abschnitt $(i)$ gebe ich einen groben Einblick in Merleau-Pontys Konzeption des menschlichen Bedeutungsverm"ogens, anhand dessen ich in Abschnitt $(ii)$ die Bedeutsamkeit von Ausdr"ucken im Allgemeinen, und Gesten im Besonderen herausarbeite. Daraufhin rekonstruiere ich in Abschnitt $(iii)$ Merleau-Pontys Argumentation daf"ur, dass die Sprache auch "`nur"' eine Form des Ausdrucks ist und somit eine gleichartige Bedeutsamkeit besitzt. Danach fasse ich die gewonnenen Erkenntnisse in Abschnitt $(iv)$ zusammen, um auf die Ausgangsthese abschliessend hinzuf"uhren.
 
