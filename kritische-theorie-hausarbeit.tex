@@ -1,0 +1,114 @@
+\documentclass[a4paper, 12pt]{article}
+%\usepackage{CJKutf8} % japanese
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+%\pagestyle{headings}
+\usepackage{setspace} %halbzeilig
+\usepackage[style=authoryear-ibid,natbib=true]{biblatex}
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{-0.8em}
+%\bibliographystyle{natdin}
+\addbibresource{kritische-theorie-hausarbeit.bib}
+\DeclareDatamodelEntrytypes{standard}
+\DeclareDatamodelEntryfields[standard]{type,number}
+\DeclareBibliographyDriver{standard}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit\newblock
+  \printfield{number}%
+  \setunit{\addspace}\newblock
+  \printfield[parens]{type}%
+  \newunit\newblock
+  \usebibmacro{location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{related}%
+  \usebibmacro{finentry}}
+
+%\titleformat{name=\section,numberless}
+%  {\normalfont\Large\bfseries}
+%  {}
+%  {0pt}
+%  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{\vspace{5ex}
+	\includegraphics*[bb=0 0 720 200, width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\vspace{30pt}
+	\scshape\LARGE{Der Regress im Fortschritt}\\\Large{Eine Analyse des Regresses im Fortschritt mit Betrachtung der kalifornischen Ideologie}\\\vspace{20pt}}
+	
+
+
+\author{Kritische Theorie der Gesellschaft: Horkheimer und Adorno (PS)\\
+	\vspace{7pt}
+          Dozent: Dr. Arnd Pollmann\\\vspace{4pt}Lennard Wolf\\
+        \small{Matrikelnummer: 583052}\\
+        \small{E-Mail: lennard.wolf@student.hu-berlin.de}\\
+        \small{Telefonnummer: +49 176 5687 4131}\\
+        \small{Studiengang: B.A. Philosophie}\\
+        \small{Modul: Praktische Philosophie}}
+
+        %\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}      
+
+\maketitle
+
+\vspace{\fill}
+
+\begin{minipage}[]{0.92\textwidth}
+    \centering
+    \onehalfspacing
+    \large   
+    30. September 2017\\
+    Sommersemester 2017
+
+    \vspace{-20mm} 
+\end{minipage}%
+\thispagestyle{empty}
+\newpage
+%\clearpage
+%\thispagestyle{empty}
+%\tableofcontents
+%\newpage
+\setcounter{page}{1}
+
+\begin{onehalfspace} 
+
+\noindent\textbf{$(o)$ Einleitung}
+
+\noindent 
+Daf"ur werde ich wie folgt vorgehen. In Abschnitt $(i)$ beschreibe ich 
+\vspace{5mm}
+
+\noindent\textbf{$(i)$ Die Wortbildtheorie}
+
+\noindent 
+\noindent\textbf{$(vii)$ Konklusion}
+
+\noindent  
+
+
+
+\end{onehalfspace}
+\nocite{*}
+\printbibliography
+\end{document}
