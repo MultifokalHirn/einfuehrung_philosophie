@@ -1,0 +1,107 @@
+\documentclass[a4paper, 12pt]{article}
+%\usepackage{CJKutf8} % japanese
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+%\pagestyle{headings}
+\usepackage{setspace} %halbzeilig
+\usepackage[style=authoryear-ibid,natbib=true]{biblatex}
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{-0.8em}
+%\bibliographystyle{natdin}
+\addbibresource{debatten-ha1.bib}
+\DeclareDatamodelEntrytypes{standard}
+\DeclareDatamodelEntryfields[standard]{type,number}
+\DeclareBibliographyDriver{standard}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit\newblock
+  \printfield{number}%
+  \setunit{\addspace}\newblock
+  \printfield[parens]{type}%
+  \newunit\newblock
+  \usebibmacro{location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{related}%
+  \usebibmacro{finentry}}
+
+%\titleformat{name=\section,numberless}
+%  {\normalfont\Large\bfseries}
+%  {}
+%  {0pt}
+%  {}
+\date{\vspace{-3ex}}
+\begin{document}
+
+\title{\vspace{5ex}
+	\includegraphics*[bb=0 0 720 200, width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\vspace{30pt}
+	\scshape\LARGE{Zusammenfassung I}\\\Large{Geographies of Knowing, Geographies of Ignorance: Jumping Scale in Southeast Asia}\\\vspace{20pt}}
+	
+
+
+\author{Regionalwissenschaftliche Debatten\\
+	\vspace{7pt}
+          Dozent: Prof. Dr. phil. Vincent Houben\\\vspace{4pt}Lennard Wolf\\
+        \small{Matrikelnummer: 583052}\\
+        \small{E-Mail: lennard.wolf@hu-berlin.de}}
+
+        %\href{mailto:lennard.wolf@student.hu-berlin.de}{lennard.wolf@student.hu-berlin.de}}}      
+
+\maketitle
+
+\vspace{\fill}
+
+\begin{minipage}[]{0.92\textwidth}
+    \centering
+    \onehalfspacing
+    \large   
+    20. November 2017\\
+    Wintersemester 2017
+
+    \vspace{-20mm} 
+\end{minipage}%
+\thispagestyle{empty}
+\newpage
+%\clearpage
+%\thispagestyle{empty}
+%\tableofcontents
+%\newpage
+\setcounter{page}{1}
+
+\begin{onehalfspace} 
+
+%\noindent\textbf{Zusammenfassung}
+
+\noindent Der 2002 veröffentlichte Essay \emph{Geographies of Knowing, Geographies of Ignorance: Jumping Scale in Southeast Asia} von Willem van Schendel ist eine kritische Reflexion über die \emph{area studies}, deren grundlegende Metaphern und die sich aus diesen ergebenden Formen von Wissen und Unwissen.
+
+Zu Beginn stellt der Autor drei mögliche Weisen vor, den Begriff \emph{area} zu verstehen. Die erste ist die als geografischen Raum, die zweite als symbolischen Raum, in dem Wissen anhand einer bestimmen Methodologie generiert wird, und drittens als institutionellen Raum, in dem ein Netzwerk aus Forscher*innen ihre Spezialisierung vorantreiben und beschützen. Die \emph{area studies} haben den geografischen Raum als Grundmetapher für die Strukturierung des Fachs gewählt, wodurch sich eine Einteilung in fachliche Spezialisierungen auf bestimmte Regionen wie zum Beispiel Südostasien ergab. Welche Areale der Welt als zusammenhängende Regionen anerkannt wurden, und wo die Trennlinien zwischen ihnen verlaufen, ist dem Autor zufolge besonders durch politische Interessen Nordamerikas und Zentraleuropas nach dem zweiten Weltkrieg zu erklären. Die Kontingenz der gängigen \emph{areas} wird anhand des Beispiels von \emph{Zomia} gezeigt, das nie als solch eine \emph{area} anerkannt wurde. Da Zomia geopolitisch eine gewisse Ambiguität hat, keine starke, zentrale Staatenbildung vorweisen kann und eine unzureichende Menge an akademischer Forschung zu ihm existierte, wurde es nie in den Kanon der \emph{area studies} aufgenommen. Indem die \emph{area studies} ihren arbiträren geografischen Einteilung als Grundprinzip verhaftet bleiben, entgehen ihnen mögliche Diskurse, die zu neuen Betrachtungsweisen menschlicher Zusammenhänge hätten führen können.
+
+Van Schendel greift als Gegenentwurf zu räumlicher Kategorisierung als ontologische Grundmetapher eine Kategorisierung nach \emph{scales} auf, durch die Begriffe wie "`global"', "`lokal"' etc. eine zentrale Rolle übernehmen. Ein flexibles Denken mit \emph{scales} ("`\emph{jumping scale}"') wäre besser dazu im Stande, Interdisziplinarität in den \emph{area studies} zu fördern, Grenzgebiete in Diskursen zu berücksichtigen, sowie die schnelllebigen Prozesse der Migrations- und Handelsflüsse zu beschreiben, denen er eine besondere Geltung beimisst.
+
+
+
+\end{onehalfspace}
+\nocite{*}
+%\bibliography{merleau-ponty-essay}
+\printbibliography
+\end{document}
