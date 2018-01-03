@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{WSSS 17/18} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\renewcommand{\today}{\textbf{ }} %löscht Datum
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Lennard Wolf}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Persönliche Informationen}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Geboren in Berlin,}}{6. April 1994} % Birthplace and date
+
+\NewEntry{Adresse}{Kaiser-Friedrich-Str. 41, 10627 Berlin} % Birthplace and date
+
+\NewEntry{E-Mail}{\href{mailto:lennard.wolf@hu-berlin.de}{lennard.wolf@hu-berlin.de}} % Email address
+
+%\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
+
+\NewEntry{Telefon}{+49 176 5687 4131} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+%\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+%
+%\Description{By working at the "Norm und Natur" congress, I aim to see the insides of a philosophy conference to better understand congresses and conferences in general, and to gain experience for my own future participation in them.}\vspace{3.5em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Berufliche Erfahrung}\vspace{1em}
+
+\NewEntry{2015 - 2016}{Hasso Plattner Institut, Potsdam}
+
+\Description{\MarginText{Tutor}Als Tutor lehrte und unterstützte ich unter der Leitung von Prof. Robert Hirschfeld Studierendenteams in den Fächern "`Softwarearchitektur"' und "`Softwaretechnik"'.}
+
+%------------------------------------------------
+
+\NewEntry{2014 - 2015}{Hasso Plattner Institut, Potsdam}
+
+\Description{\MarginText{Wissenschaftlicher Mitarbeiter}Ich unterstütze Philipp Berger und sein Team bei ihrem Promotionsprojekt als Softwareentwickler. Ich verwendete hierbei die Programmiersprachen C++ und JavaScript.}
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Ausbildung}\vspace{1em}
+
+\NewEntry{2016 - Heute}{Humboldt-Universität zu Berlin}
+
+\Description{\MarginText{Bachelor of Arts}\textit{Kernfach:} Philosophie\ \ $\cdotp$\ \  \textit{Nebenfach:} Regionalstudien Asien/Afrika}
+
+%------------------------------------------------
+
+\NewEntry{2015 - 2016}{HPI School of Design Thinking, Potsdam}
+
+\Description{\MarginText{Design Thinking Basic Track}Im Design Thinking Programm geht es für die Studierenden um das Erlernen von Fähigkeiten für die Erarbeitung innovativer Ideen für verschiedenste Problemstellungen.}
+
+%------------------------------------------------
+
+\NewEntry{2013 - 2016}{Hasso Plattner Institut, Potsdam}
+
+\Description{\MarginText{Bachelor of Science}Schnitt: 1.7\ \ $\cdotp$ \textit{Studiengang:} IT Systems Engineering\newline 
+Bachelorarbeit: \textit{Dependency Management for Hosted Continuous Integration Services}\newline
+Betreuer: Prof.~Robert \textsc{Hirschfeld} \& Dr.~Tim \textsc{Felgentreff}  \& Dr.~Jens \textsc{Lincke}}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\NewEntry{2011 - 2013}{Neues Filmgymnasium, Potsdam}
+
+\Description{\MarginText{Abitur}Schnitt: 1.0\ \ $\cdotp$\ \  \textit{Hauptfächer:} Mathematik, Englisch}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+%
+%%----------------------------------------------------------------------------------------
+%%	PUBLICATIONS
+%%----------------------------------------------------------------------------------------
+%
+%\spacedlowsmallcaps{Publications}\vspace{1em}
+%
+%\NewEntry{January 2013}{Publication Title}
+%
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+%
+%%------------------------------------------------
+%
+%\NewEntry{Sept. 2012}{Publication Title}
+%
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+%
+%%------------------------------------------------
+%
+%\vspace{1em} % Extra space between major sections
+%
+%%----------------------------------------------------------------------------------------
+%%	COMPUTER SKILLS
+%%----------------------------------------------------------------------------------------
+%
+%\spacedlowsmallcaps{Computer Skills}\vspace{1em}
+%
+%\Description{\MarginText{Basic}\textsc{java}, Adobe Illustrator}
+%
+%\Description{\MarginText{Intermediate}\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
+%
+%\Description{\MarginText{Advanced}Computer Hardware and Support}
+%
+%%------------------------------------------------
+%
+%\vspace{1em} % Extra space between major sections
+%
+%%----------------------------------------------------------------------------------------
+%%	OTHER INFORMATION
+%%----------------------------------------------------------------------------------------
+%
+%\spacedlowsmallcaps{Other Information}\vspace{1em}
+%
+%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+%
+%%------------------------------------------------
+%
+%\vspace{1em}
+%
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+%
+%%------------------------------------------------
+%
+%\vspace{1em}
+%
+%\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+%\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+%
+%\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Mothertongue}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{\parbox{\langbox}{\textsc{Spanish}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{\parbox{\langbox}{\textsc{Dutch}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
+%
+%\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%%------------------------------------------------
+%
+%\Description{\MarginText{Interests}Piano\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Chess\ \ $\cdotp$\ \ Dancing}
+%
+%%----------------------------------------------------------------------------------------
+%
+\end{cv}
+
+\end{document}
