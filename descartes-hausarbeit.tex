@@ -1,0 +1,119 @@
+\documentclass[a4paper, 12pt]{article}
+%\usepackage{CJKutf8} % japanese
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+%\pagestyle{headings}
+\usepackage{setspace} %halbzeilig
+\usepackage[style=authoryear-ibid,natbib=true]{biblatex}
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{-0.8em}
+%\bibliographystyle{natdin}
+\addbibresource{descartes-hausarbeit.bib}
+\DeclareDatamodelEntrytypes{standard}
+\DeclareDatamodelEntryfields[standard]{type,number}
+\DeclareBibliographyDriver{standard}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit\newblock
+  \printfield{number}%
+  \setunit{\addspace}\newblock
+  \printfield[parens]{type}%
+  \newunit\newblock
+  \usebibmacro{location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{related}%
+  \usebibmacro{finentry}}
+
+%\titleformat{name=\section,numberless}
+%  {\normalfont\Large\bfseries}
+%  {}
+%  {0pt}
+%  {}
+\date{\vspace{-3ex}}
+
+
+\begin{document}
+
+\title{\vspace{5ex}
+	\includegraphics*[bb=0 0 720 200, width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\vspace{30pt}
+	\scshape\LARGE{Ich denke, also wo bin ich?
+}\\\vspace{5pt}\Large{Über die Lokalität des Leibes}\\\vspace{20pt}}
+	
+
+
+\author{Die Erfahrung der Realität durch Widerstand (PS)\\
+	\vspace{7pt}
+          Dozent: Dr. Matthias Schloßberger\\\vspace{4pt}Lennard Wolf\\
+        \small{Matrikelnummer: 583052}\\
+        \small{E-Mail: \href{mailto:lennard.wolf@hu-berlin.de}{lennard.wolf@hu-berlin.de}}\\
+        \small{Telefonnummer: +49 176 5687 4131}\\
+        \small{Studiengang: B.A. Philosophie}\\
+        \small{Modul: ?}}
+
+\maketitle
+
+\vspace{\fill}
+
+\begin{minipage}[]{0.92\textwidth}
+    \centering
+    \onehalfspacing
+    \large   
+    30. April 2018\\
+    Wintersemester 2017/2018
+
+    \vspace{-20mm} 
+\end{minipage}%
+\thispagestyle{empty}
+\newpage
+%\clearpage
+%\thispagestyle{empty}
+%\tableofcontents
+%\newpage
+\setcounter{page}{1}
+
+\begin{onehalfspace} 
+
+\noindent\textbf{$(o)$ Einleitung}
+
+\noindent Wenn Descartes in seinen Meditationen verkündet "`Ich denke, also bin ich"', wo ist er dann eigentlich? Fragte man ihn persönlich, dann wäre das ganz klar: Um wo zu sein, muss man im Raum und selber ausgedehnt sein. Da es sich über solche Kategorien aber sehr leicht zweifeln lässt, sie ja sogar nur Vorstellungen sind wie manche sagen\footnote{\Cite[Vgl.][S. XXX]{kant}.}, und sie also nicht so evident sind wie die Existenz des Denkers, kann nicht sicher gesagt werden, \emph{ob} Descartes überhaupt irgendwo ist. Descartes sagt nämlich, dass das Bewusstsein, das Ich, aus einer fundamental anderen Substanz als die ausgedehnte Welt sei. Diese, die den Gesetzen der Physik unterliegt und sich im ständigen Wandel befindet, ist die Welt der Körper, und der Geist ist kein Körper. Sein Bewusstsein kann sich also gar nicht in dieser Welt befinden, es \emph{kommt} zu dieser Welt, aber wird nie hinein gelassen und muss draußen bleiben. Aus diesem Grund sei die Frage nach dem "`wo"' Unsinn und damit hätte sich das wohl für ihn. 
+
+Aber gehen wir noch einmal einen Schritt zurück und fragen uns, was Bewusstsein denn überhaupt alles sein könnte. Da Bewusstsein \emph{von etwas} qualitativ doch sehr verschieden ist von Körpern,\footnote{Der Stein für sich ist etwas komplett anderes als meine Wahrnehmung von ihm.} liegt es auf jeden Fall nahe, wie Descartes zu dem Schluß zu kommen, dass Bewusstsein aus einem anderen Stoff gemacht sein müsste, als ausgedehnte Körper. In einem solchen Kontext fällt auch gern der Begriff "`Seele"', und ihm haftet etwas mystisches, \emph{de facto} ungreifbares an. Die andere Position, die der Physikalisten, wäre, dass Bewusstsein vielmehr aus komplexen neuronalen Prozessen \emph{irgendwie} emergiere, so wie das Verhalten des Vogelschwarms auch mehr ist als die Summe des Verhaltens der Vögel. 
+
+Ob es nun zwei Substanzen gibt oder nur eine, oder doch noch mehr, damit möchte ich mich in diesem Text nicht weiter beschäftigen und verbleibe auf dieser Ebene agnostisch. Da es sich meiner Wahrnehmung nach als äußerst schwer erweist, für die physikalistische Seite zu argumentieren,\footnote{Daraus folgt erstmal nicht, dass sie zwangsläufig falsch ist. Gerade in den letzten Jahren ist mit der Entropischen Theorie des Lebens ein starkes Argument für Leben als Konsequenz thermodynamischer Prozesse in dissipativen Strukturen vorgelegt worden. Vergleiche hierfür u.a. \Citet{england2013statistical} und \Citet{perunov2016statistical}.} beschäftige ich mich hier eingehender mit Descartes und seinem unausgedehnten Geist. Ich möchte das Problem der Lokalität näher betrachten und zeigen, dass ein unausgedehnter Geist schwer erklären kann, wie ich meinen eigenen Körper als meinen identifiziere und damit als etwas ganz anderes ansehe als zum Beispiel den Körper einer anderen Person, oder gar eine Waschmaschine.
+
+Dafür werde ich wie folgt vorgehen. In Abschnitt $(i)$ stelle ich kurz Descartes dualistisches Weltbild dar und gehe genauer auf die von ihm beschriebenen Eigenschaften des Geistes ein. Danach gehe ich in Abschnitt $(ii)$ darauf ein, wie seine Vorstellungen noch heute den Diskurs über das Bewusstsein beeinflussen, und in $(iii)$ beschreibe ich, wie die Örtlichkeit von Empfindungen und Handlungen ein Problem für diese darstellen. Es folgt in Abschnitt $(iv)$ eine Einführung in Vorstellungen vom Leib nach Max Scheler, Maurice Merleau-Ponty und Thomas Fuchs und in Abschnitt $(v)$ zeige ich auf, wie diese das in $(iii)$ beschriebene Problem lösen können und was dies für das Leib-Seele-Problem allgemein bedeutet. Die abschließenden Gedanken in Abschnitt $(vi)$ bilden die Konklusion.
+
+\vspace{5mm}
+
+
+\noindent\textbf{$(i)$ Der unausgedehnte Geist des Descartes}
+
+%\noindent\textbf{$(i)$ Der ortlose Geist}
+
+\newpage
+
+\end{onehalfspace}
+\nocite{*}
+\printbibliography
+\end{document}

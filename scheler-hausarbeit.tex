@@ -1,0 +1,115 @@
+\documentclass[a4paper, 12pt]{article}
+%\usepackage{CJKutf8} % japanese
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+%\pagestyle{headings}
+\usepackage{setspace} %halbzeilig
+\usepackage[style=authoryear-ibid,natbib=true]{biblatex}
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{-0.8em}
+%\bibliographystyle{natdin}
+\addbibresource{descartes-hausarbeit.bib}
+\DeclareDatamodelEntrytypes{standard}
+\DeclareDatamodelEntryfields[standard]{type,number}
+\DeclareBibliographyDriver{standard}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit\newblock
+  \printfield{number}%
+  \setunit{\addspace}\newblock
+  \printfield[parens]{type}%
+  \newunit\newblock
+  \usebibmacro{location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{related}%
+  \usebibmacro{finentry}}
+
+%\titleformat{name=\section,numberless}
+%  {\normalfont\Large\bfseries}
+%  {}
+%  {0pt}
+%  {}
+\date{\vspace{-3ex}}
+
+
+\begin{document}
+
+\title{\vspace{5ex}
+	\includegraphics*[bb=0 0 720 200, width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\vspace{30pt}
+	\scshape\LARGE{Ich denke, also wo bin ich?
+}\\\vspace{5pt}\Large{Über die Lokalität des Leibes}\\\vspace{20pt}}
+	
+
+
+\author{Die Erfahrung der Realität durch Widerstand (PS)\\
+	\vspace{7pt}
+          Dozent: Dr. Matthias Schloßberger\\\vspace{4pt}Lennard Wolf\\
+        \small{Matrikelnummer: 583052}\\
+        \small{E-Mail: \href{mailto:lennard.wolf@hu-berlin.de}{lennard.wolf@hu-berlin.de}}\\
+        \small{Telefonnummer: +49 176 5687 4131}\\
+        \small{Studiengang: B.A. Philosophie}\\
+        \small{Modul: ?}}
+
+\maketitle
+
+\vspace{\fill}
+
+\begin{minipage}[]{0.92\textwidth}
+    \centering
+    \onehalfspacing
+    \large   
+    30. April 2018\\
+    Wintersemester 2017/2018
+
+    \vspace{-20mm} 
+\end{minipage}%
+\thispagestyle{empty}
+\newpage
+%\clearpage
+%\thispagestyle{empty}
+%\tableofcontents
+%\newpage
+\setcounter{page}{1}
+
+\begin{onehalfspace} 
+
+\noindent\textbf{$(o)$ Einleitung}
+
+\noindent 
+
+Dafür werde ich wie folgt vorgehen. In Abschnitt $(i)$ stelle ich kurz Descartes dualistisches Weltbild dar und gehe genauer auf die von ihm beschriebenen Eigenschaften des Geistes ein. Danach gehe ich in Abschnitt $(ii)$ darauf ein, wie seine Vorstellungen noch heute den Diskurs über das Bewusstsein beeinflussen, und in $(iii)$ beschreibe ich, wie die Örtlichkeit von Empfindungen und Handlungen ein Problem für diese darstellen. Es folgt in Abschnitt $(iv)$ eine Einführung in Vorstellungen vom Leib nach Max Scheler, Maurice Merleau-Ponty und Thomas Fuchs und in Abschnitt $(v)$ zeige ich auf, wie diese das in $(iii)$ beschriebene Problem lösen können und was dies für das Leib-Seele-Problem allgemein bedeutet. Die abschließenden Gedanken in Abschnitt $(vi)$ bilden die Konklusion.
+
+\vspace{5mm}
+
+
+\noindent\textbf{$(i)$ Der unausgedehnte Geist des Descartes}
+
+%\noindent\textbf{$(i)$ Der ortlose Geist}
+
+\newpage
+
+\end{onehalfspace}
+\nocite{*}
+\printbibliography
+\end{document}
