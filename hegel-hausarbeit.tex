@@ -1,0 +1,151 @@
+\documentclass[a4paper, 12pt]{article}
+%\usepackage{CJKutf8} % japanese
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fullpage}
+%\usepackage{parskip}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{calc} 
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{stmaryrd} %lightning symbol in formalisierung
+%\pagestyle{headings}
+\usepackage{setspace} %halbzeilig
+\usepackage[style=authoryear-ibid,natbib=true]{biblatex}
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{-0.8em}
+%\bibliographystyle{natdin}
+\addbibresource{scheler-hausarbeit.bib}
+\DeclareDatamodelEntrytypes{standard}
+\DeclareDatamodelEntryfields[standard]{type,number}
+\DeclareBibliographyDriver{standard}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit\newblock
+  \printfield{number}%
+  \setunit{\addspace}\newblock
+  \printfield[parens]{type}%
+  \newunit\newblock
+  \usebibmacro{location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{related}%
+  \usebibmacro{finentry}}
+
+\newcommand{\chapquote}[3]{\begin{quotation} \textit{#1} \small \end{quotation} \begin{flushright} - #2 \textit{#3}\end{flushright} }
+
+
+\date{\vspace{-3ex}}
+
+
+\begin{document}
+
+\title{\vspace{5ex}
+	\includegraphics*[bb=0 0 720 200, width=0.72\textwidth]{ErstesSem/images/hu_logo.png}\\
+	\vspace{30pt}
+	\scshape\LARGE{Der Drang zur Perfectibilität}\\\vspace{20pt}}
+	
+
+
+\author{Hegels Theorie der Weltgeschichte (HS, SS 18)\\
+	\vspace{7pt}
+          Dozent: Dr. Dimitris Karydas\\\vspace{4pt}Lennard Wolf\\
+        \small{Matrikelnummer: 583052}\\
+        \small{E-Mail: \href{mailto:lennard.wolf@hu-berlin.de}{lennard.wolf@hu-berlin.de}}\\
+        \small{Telefonnummer: +49 176 5687 4131}\\
+        \small{Studiengang: B.A. Philosophie}}
+        %\\\small{Modul: ?}}
+
+\maketitle
+
+\vspace{\fill}
+
+\begin{minipage}[]{0.92\textwidth}
+    \centering
+    \onehalfspacing
+    \large   
+    08. August 2018\\
+    Sommersemester 2018
+
+    \vspace{-20mm} 
+\end{minipage}%
+\thispagestyle{empty}
+\newpage
+%\clearpage
+%\thispagestyle{empty}
+%\tableofcontents
+%\newpage
+\setcounter{page}{1}
+
+\begin{onehalfspace} 
+
+
+\noindent\textbf{$(o)$ Einleitung}
+\chapquote{Und auf der Wolke saß einer, der gleich war einem Menschensohn; der hatte eine goldene Krone auf seinem Haupt und in seiner Hand eine scharfe Sichel. Und ein andrer Engel kam aus dem Tempel und rief dem, der auf der Wolke saß, mit großer Stimme zu: Setze deine Sichel an und ernte; denn die Zeit zu ernten ist gekommen, denn die Ernte der Erde ist reif geworden. Und der auf der Wolke saß, setzte seine Sichel an die Erde und die Erde wurde abgeerntet.}{Die Offenbarung des Johannes}{Kap. 14, 14-16}
+
+\noindent Im Gegensatz zur Natur besteht bei Hegel für den Geist die Möglichkeit zu \emph{echter} Veränderung.
+
+\vspace{3mm}
+
+Ich werde wie folgt vorgehen. In Abschnitt $(i)$ 
+
+\begin{itemize}
+  \item Def. Echte Veränderung: Abgrenzung zu unechte (Natur), und zu technologischer (diese ist ein Mittel zur geistigen Veränderung, aber nicht diese selbst - kann aber dafür gehalten werden: Aristoteles hatte kein iPhone, wir sind also weiter entwickelt? bei hegel nicht notwendigerweise!)
+  \item Def. Entwicklung als inhärentes Prinzip der echten Veränderung, drang zur p.
+  \item Gibt es geistigen Rückschritt??!
+  \item Naturbeherrschung als Trop der Fortschrittlichkeit, naturbeherrschung/instrumentelle vernunft wird für fortschritt gehalten! Adorno
+  \item These des großen Filters als Gegenthese zu Hegel? 
+  \item es mag im großen und ganzen wahr sein, dass sich die natur nicht verändert und die materielle masse als ganzes gesehen gleich bleibt (2. thermodynamisches) aber der planet könnte uns ausrotten
+  \item gibt es einen standpunkt, von dem aus die these confirmed werden kann?
+\end{itemize}
+
+
+\vspace{5mm}
+\noindent\textbf{$(i)$ Der unausgedehnte Geist}
+
+%------------------%
+%    Einleitung    %
+%------------------%
+
+\noindent 
+
+%------------------%
+%    Hauptteil     %
+%------------------%
+
+
+
+%------------------%
+%    Konklusion    %
+%------------------%
+
+
+\vspace{5mm}
+\noindent\textbf{$(ii)$ }
+
+%------------------%
+%    Einleitung    %
+%------------------%
+
+\end{onehalfspace}
+%\nocite{*}
+\printbibliography
+
+\end{document}
+
+%--------------------------------------------------------------------------------
+%%---------------MÜLL------------------------------------------------------------
+%--------------------------------------------------------------------------------
